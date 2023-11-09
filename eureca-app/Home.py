@@ -1,3 +1,4 @@
+pip install st-pages
 import streamlit as st
 
 #타이틀 & 이모티콘
