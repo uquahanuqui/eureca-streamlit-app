@@ -14,6 +14,7 @@ clicked=st.button("Go Shopping")
 
 #사이드바
 with st.sidebar:
+        "Home"
         "Shop"
         "AI Personal"
         "Community" 
