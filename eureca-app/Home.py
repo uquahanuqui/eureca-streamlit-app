@@ -20,10 +20,17 @@ st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
 #이미지 삽입
 
-#사이드바
-with st.sidebar:
-        "Home"
-        "Shop"
-        "AI Personal"
-        "Community" 
-        "Notice"
+#페이지
+from st_pages import Page, Section, show_pages, add_page_title
+
+add_page_title()
+
+show_pages(
+    [
+        Page("Home.py", "Home"),
+        Page("Shop.py", "Shop"),
+        Page("https://teachablemachine.withgoogle.com/models/Y44cpwtyV/", "AI Personal"),
+        Page("Community"),
+        Page("Notice")    
+    ]
+)
