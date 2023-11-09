@@ -23,7 +23,7 @@ st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 #페이지
 from st_pages import Page, Section, show_pages, add_page_title
 
-add_page_title()
+add_page_title("LENS IN GRAY")
 
 show_pages(
     [
