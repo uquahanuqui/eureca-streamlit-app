@@ -20,6 +20,9 @@ st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
 #이미지 삽입
 
+#눈내림
+st.snow()
+
 #페이지
 from st_pages import Page, Section, show_pages, add_page_title
 
