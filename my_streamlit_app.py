@@ -12,3 +12,18 @@ st.text("렌즈추천사이트")
 clicked=st.button("click")
 
 #이미지 삽입
+
+#사이드바
+with st.sidebar:
+    shop=st.text_input(
+        "Shop"
+    )
+    ai=st.text_input(
+        "AI Personal"
+    )
+    community=st.text_input(
+        "Community"
+    )
+    notice=st.text_input(
+        "Notice"
+    )
