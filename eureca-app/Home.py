@@ -15,15 +15,7 @@ clicked=st.button("click")
 
 #사이드바
 with st.sidebar:
-    shop=st.text_input(
         "Shop"
-    )
-    ai=st.text_input(
         "AI Personal"
-    )
-    community=st.text_input(
-        "Community"
-    )
-    notice=st.text_input(
+        "Community" 
         "Notice"
-    )
