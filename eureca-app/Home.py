@@ -28,7 +28,12 @@ add_page_title("LENS IN GRAY")
 show_pages(
     [
         Page("Home.py", "Home"),
-        Page("Shop.py", "Shop"),
+        Section(name="Shop"),
+        page("Lens-me"),
+        page("O-lens"),
+        page("Idol-lens"),
+        page("HapaKristin"),
+        Page("Not in a section", in_section=False),
         Page("https://teachablemachine.withgoogle.com/models/Y44cpwtyV/", "AI Personal"),
         Page("Community"),
         Page("Notice")    
