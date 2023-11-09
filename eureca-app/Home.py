@@ -4,12 +4,11 @@ import streamlit as st
 st.title("안뇽! :snowman:")
 
 #일반 글씨
-st.header("유쾌한육회")
-st.write("우리는 6조")
-st.text("렌즈추천사이트")
+st.header("AI 퍼스널 렌즈 추천 플랫폼")
+st.write("6조 : 유쾌한육회")
 
 #버튼 클릭
-clicked=st.button("click")
+clicked=st.button("Go Shopping")
 
 #이미지 삽입
 
