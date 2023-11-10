@@ -1,5 +1,8 @@
 import streamlit as st
 
+#사이드바
+st.sidebar.markdown("Home :snowman:")
+
 #타이틀 & 이모티콘
 st.title("Home :snowman:")
 
