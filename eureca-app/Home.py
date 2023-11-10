@@ -30,22 +30,3 @@ with col4:
 
 #눈내림
 st.snow()
-
-#페이지
-def main_page():
-    st.markdown("Home")
-    st.sidebar.markdown("Home")
-
-def page2():
-    st.markdown("Shop")
-    st.sidebar.markdown("Shop")
-
-def page3():
-    st.markdown("# Page 3 🎉")
-    st.sidebar.markdown("# Page 3 🎉")
-
-page_names_to_funcs = {
-    "Main Page": main_page,
-    "Page 2": page2,
-    "Page 3": page3,
-}
