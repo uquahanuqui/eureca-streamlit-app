@@ -7,7 +7,7 @@ st.title("Home :snowman:")
 st.divider()
 
 #일반 글씨
-st.markdown("<h1 style='text-align: center;'>Lens in Gray</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Lens in Gray</h1>", unsafe_allow_html=True), st.write(":snowman:")
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
 #눈내림
