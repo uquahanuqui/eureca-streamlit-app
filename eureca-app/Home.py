@@ -7,10 +7,15 @@ st.title("Home :snowman:")
 st.divider()
 
 #일반 글씨
-st.header("Lens in Grey")
+st.header("Lens in Gray")
 st.write("Team 6 : uquahanuqui :christmas_tree:")
     
 #이미지 삽입
+from PIL import Image
+
+image = Image.open('워뇽.jpg')
+
+st.image(image)
 
 #눈내림
 st.snow()
