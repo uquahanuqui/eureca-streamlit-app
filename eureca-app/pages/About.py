@@ -20,6 +20,7 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 st.write(" ")
+st.write(" ")
 
 #내용(영어)
 st.markdown("<p style='text-align: center;'>Lens in Gray makes us feel the most like me,</p>", unsafe_allow_html=True)
