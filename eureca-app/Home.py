@@ -17,7 +17,7 @@ from PIL import Image
 image_path = r"/jwy.jpg"
 
 # Load the image into the Streamlit app
-image = Image.open(image_path)
+image = Image.open("https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg")
 
 # Display the image in the Streamlit app
 st.image(image, caption='A caption for your image', use_column_width='always')
