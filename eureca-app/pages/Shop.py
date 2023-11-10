@@ -21,9 +21,14 @@ with col3:
 with col4:
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
-file = st.file_uploader("Choose an Excel file", type=["xlsx"])
-    df = pd.read_excel(file, engine='openpyxl')
-    st.dataframe(df)
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(50, 20), columns=("col %d" % i for i in range(20)))
+
+st.dataframe(df)
 
 
     
