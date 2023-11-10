@@ -25,12 +25,12 @@ st.snow()
 
 #페이지
 def main_page():
-    st.markdown("# Main page 🎈")
-    st.sidebar.markdown("# Main page 🎈")
+    st.markdown("Home")
+    st.sidebar.markdown("Home")
 
 def page2():
-    st.markdown("# Page 2 ❄️")
-    st.sidebar.markdown("# Page 2 ❄️")
+    st.markdown("Shop")
+    st.sidebar.markdown("Shop")
 
 def page3():
     st.markdown("# Page 3 🎉")
