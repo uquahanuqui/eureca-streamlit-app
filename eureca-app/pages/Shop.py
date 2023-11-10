@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 #타이틀 & 이모티콘
 st.title("Shop select")
@@ -20,18 +21,9 @@ with col3:
 with col4:
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
-import streamlit as st
-import pandas as pd
-
-# Create a file uploader widget
-uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
-
-import streamlit as st
-import pandas as pd
-
-file = st.file_uploader("파일을 선택하세요.", type=['xlsx'])
-        df = pd.read_excel(file)
-        st.dataframe(df)
+file = st.file_uploader("Choose an Excel file", type=["xlsx"])
+    df = pd.read_excel(file)
+    st.dataframe(df)
 
 
     
