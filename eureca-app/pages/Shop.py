@@ -22,7 +22,7 @@ with col4:
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
 file = st.file_uploader("Choose an Excel file", type=["xlsx"])
-    df = pd.read_excel(file)
+    df = pd.read_excel(file, engine='openpyxl')
     st.dataframe(df)
 
 
