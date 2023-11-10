@@ -7,8 +7,8 @@ st.title("Home :snowman:")
 st.divider()
 
 #일반 글씨
-st.header("AI 퍼스널 렌즈 추천 플랫폼")
-st.write("6조 : 유쾌한육회")
+st.header("AI personal lens recommendation platform")
+st.write("6 : uquahanuqui :christmas_tree:")
 
 #버튼 클릭
 col1, col2, col3, col4 = st.columns(4)
