@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 #타이틀 & 이모티콘
-st.title("Shop select")
+st.markdown("<h1 style='text-align: center;'>Shop select</h1>", unsafe_allow_html=True)
 
 #구분선
 st.divider()
