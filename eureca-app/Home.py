@@ -10,8 +10,6 @@ st.divider()
 st.header("AI 퍼스널 렌즈 추천 플랫폼")
 st.write("6조 : 유쾌한육회")
 
-st.divider()
-
 #버튼 클릭
 col1, col2, col3, col4 = st.columns(4)
 with col1:
