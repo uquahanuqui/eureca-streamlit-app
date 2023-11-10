@@ -19,3 +19,20 @@ with col3:
 
 with col4:
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
+
+import streamlit as st
+import pandas as pd
+
+# Create a file uploader widget
+uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
+
+pip install streamlit pandas
+
+if uploaded_file:
+    # Use Pandas to read the Excel file
+    df = pd.read_excel(o-lens.xlsx)
+
+    # Do something with the data, for example, display the dataframe
+    st.write(o-lens.xlsx)
+    
+
