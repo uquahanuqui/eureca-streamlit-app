@@ -11,6 +11,7 @@ st.header("Lens in Gray")
 st.write("Team 6 : uquahanuqui :christmas_tree:")
     
 #이미지 삽입
+image = Image.open(r"C:\Users\User\Downloads\jwy.jpg")
 
 #눈내림
 st.snow()
