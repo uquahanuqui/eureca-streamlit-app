@@ -14,5 +14,6 @@ st.caption("Q. 오프라인 쇼룸이 있나요?")
 
 st.header("Q&A")
 st.caption("주문 문의 :lock:")
+st.caption("→RE: 주문 문의")
 st.caption("기타 문의 :lock:")
 st.caption("상품 문의 :lock:")
