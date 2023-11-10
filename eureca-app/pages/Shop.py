@@ -25,24 +25,29 @@ with col4:
 import pandas as pd
 import streamlit as st
 
-# Cache the dataframe so it's only loaded once
-@st.cache_data
-def load_data():
-    return pd.DataFrame(
-        {
-            "product_name": [퓨어비전2, 멀티포컬, 바이오피니티 토릭, 에어옵틱스 토릭, 나이트앤데이],
-            "product_cost": [95,000, 90,000, 90,000, 75,000, 80,000],
-        }
-    )
+import pandas as pd
+import streamlit as st
 
-# Boolean to resize the dataframe, stored as a session state variable
-st.checkbox("Use container width", value=False, key="use_container_width")
+data_df = pd.DataFrame(
+    {
+        "apps": [
+            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/5435b8cb-6c6c-490b-9608-799b543655d3/Home_Page.png",
+            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/ef9a7627-13f2-47e5-8f65-3f69bb38a5c2/Home_Page.png",
+            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/31b99099-8eae-4ff8-aa89-042895ed3843/Home_Page.png",
+            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/6a399b09-241e-4ae7-a31f-7640dc1d181e/Home_Page.png",
+        ],
+    }
+)
 
-df = load_data()
-
-# Display the dataframe and allow the user to stretch the dataframe
-# across the full width of the container, based on the checkbox value
-st.dataframe(df, use_container_width=st.session_state.use_container_width)
+st.data_editor(
+    data_df,
+    column_config={
+        "apps": st.column_config.ImageColumn(
+            "Preview Image", help="Streamlit app preview screenshots"
+        )
+    },
+    hide_index=True,
+)
 
 
     
