@@ -23,7 +23,25 @@ with col4:
 
 
 
-st.dataframe(data=None, width=None, height=None, *, use_container_width=False, hide_index=None, column_order=None, column_config=None)
+import streamlit as st
+import pandas as pd
+
+def main():
+    st.title('CSV 파일 업로드')
+
+    # 파일 업로더 위젯을 만듭니다.
+    uploaded_file = st.file_uploader("CSV 파일을 업로드하세요", type=['csv'])
+
+    if uploaded_file:
+        # Pandas를 사용하여 CSV 파일을 데이터프레임으로 읽습니다.
+        df = pd.read_csv(uploaded_file)
+
+        # 데이터프레임을 스트림릿에 표시합니다.
+        st.dataframe(df)
+
+if __name__ == "__main__":
+    main()
+
 
 
     
