@@ -14,7 +14,7 @@ st.write("Team 6 : uquahanuqui :christmas_tree:")
 from PIL import Image
 
 # Use a raw string for the file path
-image_path = r"jwy.jpg"
+image_path = r"/jwy.jpg"
 
 # Load the image into the Streamlit app
 image = Image.open(image_path)
