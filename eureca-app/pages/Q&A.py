@@ -13,7 +13,7 @@ st.caption("Q. 실시간 문의가 가능한가요?")
 st.caption("Q. AI Personal 추천이 정확한가요?")
 st.caption("Q. 오프라인 쇼룸이 있나요?")
 
-
+st.markdown("---")
 st.header("Q&A")
 st.markdown("---")
 st.caption("주문 문의 :lock:")
