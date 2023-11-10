@@ -26,8 +26,6 @@ import pandas as pd
 # Create a file uploader widget
 uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
 
-pip install streamlit pandas
-
 import streamlit as st
 import pandas as pd
 
