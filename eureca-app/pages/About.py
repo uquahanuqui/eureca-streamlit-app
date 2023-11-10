@@ -31,3 +31,6 @@ st.write("It pursues a cool and comfortable fit without giving it strength,")
 st.write("and a trendy and clean sensibility of Lens in Gray.")
 st.write(" ")
 st.write("I hope that the more trends change, the more value it shines.")
+
+st.markdown("<h1 style='text-align: center;'>Your Centered Header</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>This is a centered paragraph.</p>", unsafe_allow_html=True)
