@@ -13,7 +13,7 @@ st.write("Team 6 : uquahanuqui :christmas_tree:")
 #이미지 삽입
 from PIL import Image
 
-image = Image.open('워뇽.jpg')
+image = Image.open('jyw.jpg')
 
 st.image(image)
 
