@@ -37,5 +37,5 @@ st.markdown("<p style='text-align: center;'>I hope that the more trends change, 
 st.write(" ")
 st.write(" ")
 st.write(" ")
-st.write(" "
+st.write(" ")
 st.markdown("<h1 style='text-align: center;'>❄️❄️❄️</h1>", unsafe_allow_html=True)
