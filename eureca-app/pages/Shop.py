@@ -30,7 +30,6 @@ import streamlit as st
 import pandas as pd
 
 file = st.file_uploader("파일을 선택하세요.", type=['xlsx'])
-    if uploaded_file:
         df = pd.read_excel(file)
         st.dataframe(df)
 
