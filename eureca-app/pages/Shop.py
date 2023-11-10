@@ -30,17 +30,8 @@ import streamlit as st
 def load_data():
     return pd.DataFrame(
         {
-            "first column": [퓨어비전2 멀티포컬
-바이오피니티 토릭
-에어옵틱스 토릭
-나이트앤데이
-울트라 토릭
-바이오피니티
-퓨어비전2
-옵티마 FW
-울트라
-],
-            "second column": [10, 20, 30, 40],
+            "product_name": [퓨어비전2, 멀티포컬, 바이오피니티 토릭, 에어옵틱스 토릭, 나이트앤데이],
+            "product_cost": [95,000, 90,000, 90,000, 75,000, 80,000],
         }
     )
 
