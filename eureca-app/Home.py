@@ -32,4 +32,4 @@ with col4:
 st.snow()
 
 #검색창
-search_query = st.sidebar.text_input("Search :mag:", key="search_query")
+search_query = st.text_input("Search :mag:")
