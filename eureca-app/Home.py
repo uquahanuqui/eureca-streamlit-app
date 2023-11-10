@@ -16,7 +16,7 @@ from PIL import Image
 
 image_path = r"C:\Users\User\Downloads\jwy.jpg"
 image = Image.open(image_path)
-st.image(image, use_column_width='always')
+st.image(image)
 
 #눈내림
 st.snow()
