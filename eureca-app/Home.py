@@ -32,9 +32,4 @@ with col4:
 st.snow()
 
 #검색창
-st.sidebar.title("Sidebar Title")
-st.sidebar.write("Sidebar content")
-
-search_query = st.sidebar.text_input("Search:", key="search_query")
-
-st.sidebar.write("You entered:", search_query)
+search_query = st.sidebar.text_input("Search :mag:", key="search_query")
