@@ -30,3 +30,11 @@ with col4:
 
 #눈내림
 st.snow()
+
+#검색창
+st.sidebar.title("Sidebar Title")
+st.sidebar.write("Sidebar content")
+
+search_query = st.sidebar.text_input("Search:", key="search_query")
+
+st.sidebar.write("You entered:", search_query)
