@@ -32,6 +32,8 @@ st.markdown("<p style='text-align: center;'>We collaborate with various lens com
 st.markdown("<p style='text-align: center;'>It pursues a cool and comfortable fit without giving it strength,</p>", unsafe_allow_html=True)
 st.write(" ")
 st.markdown("<p style='text-align: center;'>I hope that the more trends change, the more value it shines.</p>", unsafe_allow_html=True)
+
+#
 st.write(" ")
 st.write(" ")
 st.write(" ")
