@@ -8,7 +8,7 @@ st.divider()
 
 #일반 글씨
 st.header("AI personal lens recommendation platform")
-st.write("6 : uquahanuqui :christmas_tree:")
+st.write("Team 6 : uquahanuqui :christmas_tree:")
     
 #이미지 삽입
 
