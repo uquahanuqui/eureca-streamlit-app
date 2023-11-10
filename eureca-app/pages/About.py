@@ -32,5 +32,5 @@ st.write("and a trendy and clean sensibility of Lens in Gray.")
 st.write(" ")
 st.write("I hope that the more trends change, the more value it shines.")
 
-st.markdown("<h1 style='text-align: center;'>Your Centered Header</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Lens in Gray는 우리가 가장 나다울 수 있도록,</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>This is a centered paragraph.</p>", unsafe_allow_html=True)
