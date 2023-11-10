@@ -28,11 +28,18 @@ uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
 
 pip install streamlit pandas
 
-if uploaded_file:
-    # Use Pandas to read the Excel file
-    df = pd.read_excel(o-lens.xlsx)
+import streamlit as st
+import pandas as pd
 
-    # Do something with the data, for example, display the dataframe
-    st.write(o-lens.xlsx)
+file = st.file_uploader("파일을 선택하세요.", type=['xlsx'])
+
+    if uploaded_file:
+        # Use Pandas to read the Excel file
+        df = pd.read_excel(file)
+
+        # Show the dataframe in the app
+        st.dataframe(df)
+
+
     
 
