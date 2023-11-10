@@ -1,7 +1,7 @@
 import streamlit as st
 
 #타이틀 & 이모티콘
-st.title("Q&A")
+st.markdown("<h1 style='text-align: center;'>Q&A</h1>", unsafe_allow_html=True)
 
 #구분선
 st.divider()
