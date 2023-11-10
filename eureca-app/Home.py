@@ -32,4 +32,5 @@ with col4:
 st.snow()
 
 #검색창
+st.markdown("---")
 search_query = st.text_input("Search :mag:")
