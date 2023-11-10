@@ -7,7 +7,7 @@ st.markdown("<h1 style='text-align: center;'>Lens in Gray</h1>", unsafe_allow_ht
 st.divider()
 
 #일반 글씨
-st.markdown("<h1 style='text-align: center;'>Lens in Gray</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>☃️</h1>", unsafe_allow_html=True)
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
 #눈내림
