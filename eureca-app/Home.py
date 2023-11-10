@@ -13,9 +13,9 @@ st.write("Team 6 : uquahanuqui :christmas_tree:")
 #이미지 삽입
 from PIL import Image
 
-image_path = "C:\Users\User\Downloads\jwy.jpg"
+image_path = r"C:\Users\User\Downloads\jwy.jpg"
 image = Image.open(image_path)
-st.image(image, use_column_width='always')
+st.image(image, caption='A caption for your image', use_column_width='always')
 
 import os
 
