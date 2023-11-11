@@ -58,5 +58,6 @@ st.divider()
 
 
 st.write("<p style='text-align: center; line-height: 1.2;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
+st.write("<p style='text-align: center; line-height: 1.2;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
 
 
