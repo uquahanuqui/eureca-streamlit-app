@@ -8,8 +8,8 @@ st.divider()
 
 #내용
 st.write(" ")
-st.markdown("<p style='text-align: center;'line-height: 1.2;>Lens in Gray는 우리가 가장 나다울 수 있도록,</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'line-height: 1.2;>매번 렌즈를 사용할 때마다 자신의 컬러에 꼭 맞아 행복한 감정을 간직할 수 있도록,</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'line-height: 1.0;>Lens in Gray는 우리가 가장 나다울 수 있도록,</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'line-height: 1.0;>매번 렌즈를 사용할 때마다 자신의 컬러에 꼭 맞아 행복한 감정을 간직할 수 있도록,</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>좋은 서비스와 섬세한 추천을 제공합니다.</p>", unsafe_allow_html=True)
 st.write(" ")
 st.markdown("<p style='text-align: center;'>우리는 매년 다양한 렌즈사와 협업하여 다채로운 렌즈 추천을 선보이기도 하며</p>", unsafe_allow_html=True)
