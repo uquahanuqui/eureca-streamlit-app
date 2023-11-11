@@ -56,6 +56,7 @@ st.caption("<p style='text-align: center; margin: 5px;'>#77 Kookmin University M
 st.caption("<p style='text-align: center; margin: 5px;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
 
-st.markdown("<p style='text-align: center; margin: 5px; line-height: 1.2;'><span style='font-size: 24px;'>Lens</span> <span style='font-size: 18px;'>in</span> <span style='font-size: 16px;'>Gray</span> <span style='font-size: 20px;'>Co.</span> <span style='font-size: 22px;'>Owner</span> <span style='font-size: 18px;'>Uquahanuqui</span></p>", unsafe_allow_html=True)
+
+st.write(“<p style='text-align: center; margin: 5px; line-height: 1.2;'><span style='font-size: 5px;'>Lens in Gray</span> <span style='font-size: 5px;'>Co.</span> <span style='font-size: 4px;'>Owner</span> <span style='font-size: 5px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 
 
