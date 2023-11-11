@@ -69,6 +69,6 @@ st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Ko
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
 
-st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Phone</span> <span style='margin-right: 10px;'> </span> <span style='font-size: 15px;'>+82 10-4536-6713</span></p>", unsafe_allow_html=True)
+st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 13px;'>Phone</span> <span style='margin-right: 8px;'> </span> <span style='font-size: 13px;'>+82 10-4536-6713</span></p>", unsafe_allow_html=True)
 
 
