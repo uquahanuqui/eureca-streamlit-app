@@ -10,7 +10,7 @@ st.markdown("---")
 st.write("Team 6 : uquahanuqui 🎄")
 
 # 이미지 추가
-image_url = "image_url_jwy.jpeg"
+image_url = "image_url_jwy.jpg"
 st.image(image_url, caption="Image Description")
 
 # 검색창
