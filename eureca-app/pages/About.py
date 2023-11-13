@@ -7,7 +7,7 @@ st.markdown("<h1 style='text-align: center;'>About</h1>", unsafe_allow_html=True
 st.divider()
 
 #이미지 첨부
-img_url = "https://nomelet.co.kr/web/upload/NNEditor/20231005/lookbook_bg_ECB59CECA285_2.jpg"
+img_url = "http://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
 st.image(img_url)
 
 #내용
