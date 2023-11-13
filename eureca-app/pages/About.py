@@ -6,6 +6,10 @@ st.markdown("<h1 style='text-align: center;'>About</h1>", unsafe_allow_html=True
 #구분선
 st.divider()
 
+#이미지 첨부
+img_url = "https://nomelet.co.kr/web/upload/NNEditor/20231005/lookbook_bg_ECB59CECA285_2.jpg"
+st.image(img_url)
+
 #내용
 st.write(" ")
 st.markdown("<p style='text-align: center;'line-height: 1.0;>Lens in Gray는 우리가 가장 나다울 수 있도록,</p>", unsafe_allow_html=True)
