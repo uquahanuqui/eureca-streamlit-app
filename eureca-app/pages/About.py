@@ -8,16 +8,13 @@ st.divider()
 
 #이미지 첨부
 img_url = "http://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
-st.image(img_url)
-
-img_url = "http://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px; /* 이미지 높이 조절 */
+    height: 300px; /* 이미지 높이 조절 */
 """
 
 # 이미지를 스타일링하여 중앙에 표시
