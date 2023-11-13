@@ -25,7 +25,7 @@ st.caption("→ RE: 상품 문의 :lock:")
 
 
 st.markdown("---")
-st.markdown("<p style='font-size: 30px; font-weight: bold; margin: 0.5px 0;'>Q&A</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-size: 30px; font-weight: bold; margin: 0.1px 0;'>Q&A</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 
