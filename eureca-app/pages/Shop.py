@@ -51,10 +51,11 @@ with col1:
     st.write("<a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center;'>INSTAGRAM</a>", unsafe_allow_html=True)
 
 with col2:
-    st.write("<a href='https://o-lens.com/' style='font-size: 14px; text-align: center;'>BLOG</a>", unsafe_allow_html=True)
+    st.write("<div style='display: flex; justify-content: center;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center;'>BLOG</a></div>", unsafe_allow_html=True)
 
 with col3:
     st.write("<a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center;'>KAKAO CHANNEL</a>", unsafe_allow_html=True)
+
 
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
