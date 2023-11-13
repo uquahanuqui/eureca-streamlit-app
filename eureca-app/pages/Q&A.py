@@ -23,6 +23,12 @@ st.caption("→ RE: 기타 문의 :lock:")
 st.write("‣ 상품 문의 :lock:")
 st.caption("→ RE: 상품 문의 :lock:")
 
+
+st.markdown("---")
+st.markdown("<p style='font-size: 30px; font-weight: bold; margin: 5px 0;'>Q&A</p>", unsafe_allow_html=True)
+st.markdown("---")
+
+
 #프로필
 st.divider()
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
