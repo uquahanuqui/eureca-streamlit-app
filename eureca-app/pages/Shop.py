@@ -44,6 +44,16 @@ if __name__ == "__main__":
 
 
 #프로필
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.link_button("INSTAGRAM", "https://www.lens-me.com/shop/")
+
+with col2:
+    st.link_button("BLOG", "https://o-lens.com/")
+
+with col3:
+    st.link_button("KAKAO CHANNEL", "https://www.i-dol.kr/")
+
 st.divider()
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
