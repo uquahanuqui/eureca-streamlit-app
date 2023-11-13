@@ -75,7 +75,7 @@ st.markdown("<style>"
             "    font-size: 14px;"
             "    text-align: center;"
             "    color: black;"
-            "    margin: 0 10px;"  # 버튼 간격 조정
+            "    margin: 10px;"  # 버튼 간격 조정
             "    position: absolute;"
             "}"
             ".button1 {"
