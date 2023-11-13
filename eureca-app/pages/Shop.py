@@ -56,14 +56,6 @@ with col2:
 with col3:
     st.write("<a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center;'>KAKAO CHANNEL</a>", unsafe_allow_html=True)
 
-# col1과 col3에 비어 있는 내용 추가하여 간격 맞추기
-with col1:
-    st.empty()
-
-with col3:
-    st.empty()
-
-
 
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
