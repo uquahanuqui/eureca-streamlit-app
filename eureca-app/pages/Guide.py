@@ -6,8 +6,6 @@ st.markdown("<h1 style='text-align: center;'>Guide</h1>", unsafe_allow_html=True
 #구분선
 st.divider()
 
-st.header("<span style='font-size: 30px;'>회원가입 안내</span> </p>", unsafe_allow_html=True)
-
 #내용
 st.header("회원가입 안내")
 st.write(" ")
