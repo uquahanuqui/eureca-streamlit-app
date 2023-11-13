@@ -10,7 +10,7 @@ st.write(" ")
 st.write(" ")
 
 #이미지 첨부
-img_url = "https://images.khan.co.kr/article/2023/09/23/news-p.v1.20230923.969810874c1f4bcb8a209cf6c722733c_P1.jpg"
+img_url = "https://i.pinimg.com/originals/a9/09/27/a9092792aa751e2d55d016693d9b5edd.jpg"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
