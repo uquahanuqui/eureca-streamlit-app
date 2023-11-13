@@ -69,6 +69,30 @@ st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울
 st.divider()
 
 
+st.markdown("""
+<style>
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -5px; /* 버튼 사이 간격 조절 */
+  }
+  .button-container a {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 5px; /* 각 버튼의 좌우 간격 조절 */
+  }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="button-container">
+  <a href='https://www.lens-me.com/shop/'>INSTAGRAM</a>
+  <a href='https://o-lens.com/'>BLOG</a>
+  <a href='https://www.i-dol.kr/'>KAKAO CHANNEL</a>
+</div>
+""", unsafe_allow_html=True)
+
+
 
 
     
