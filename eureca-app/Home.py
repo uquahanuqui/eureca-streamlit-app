@@ -10,7 +10,7 @@ st.divider()
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
 #이미지 첨부
-img_url = "https://fimg5.pann.com/new/download.jsp?FileID=65745091"
+img_url = "http://www.dizzotv.com/site/data/img_dir/2022/07/21/2022072180056_0.jpg"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
