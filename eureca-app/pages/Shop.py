@@ -55,7 +55,9 @@ with col2:
 
 with col3:
     st.write("<div style='display: flex; justify-content: right;'><a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
-
+    
+st.write(" ")
+st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
 st.write(" ")
@@ -67,34 +69,3 @@ st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span st
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
-
-
-
-st.markdown("""
-<style>
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 -5px; /* 버튼 사이 간격 조절 */
-  }
-  .button-container a {
-    font-size: 14px;
-    text-align: center;
-    margin: 0 5px; /* 각 버튼의 좌우 간격 조절 */
-  }
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="button-container">
-  <a href='https://www.lens-me.com/shop/'>INSTAGRAM</a>
-  <a href='https://o-lens.com/'>BLOG</a>
-  <a href='https://www.i-dol.kr/'>KAKAO CHANNEL</a>
-</div>
-""", unsafe_allow_html=True)
-
-
-
-
-    
-
