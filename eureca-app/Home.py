@@ -9,6 +9,10 @@ st.divider()
 #일반 글씨
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
+#이미지 첨부
+img_url = https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.blog.naver.com%2Feorudspt%2F222875305727&psig=AOvVaw2fgtJ1No-WUXQTWXt284fR&ust=1699936205915000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCWx4CSwIIDFQAAAAAdAAAAABAD
+st.image(image_url)
+
 #눈내림
 st.snow()
 
