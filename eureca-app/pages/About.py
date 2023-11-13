@@ -5,6 +5,9 @@ st.markdown("<h1 style='text-align: center;'>About</h1>", unsafe_allow_html=True
 
 #구분선
 st.divider()
+st.write(" ")
+st.write(" ")
+st.write(" ")
 
 #이미지 첨부
 img_url = "https://images.khan.co.kr/article/2023/09/23/news-p.v1.20230923.969810874c1f4bcb8a209cf6c722733c_P1.jpg"
