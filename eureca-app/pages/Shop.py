@@ -51,7 +51,7 @@ with col1:
     st.write("<div style='display: flex; margin-left: 250px;'><a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
 
 with col2:
-    st.write("<div style='display: flex; justify-content: center; margin-left: 100px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center;'>BLOG</a></div>", unsafe_allow_html=True)
+    st.write("<div style='display: flex; justify-content: center; margin-left: -50px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center;'>BLOG</a></div>", unsafe_allow_html=True)
 
 with col3:
     st.write("<div style='display: flex; margin-left: -95px;'><a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
