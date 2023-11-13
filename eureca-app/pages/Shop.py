@@ -68,32 +68,3 @@ st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span st
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
-
-
-st.markdown("<style>"
-            ".button {"
-            "    font-size: 14px;"
-            "    text-align: center;"
-            "    color: black;"
-            "    margin: 10px;"  # 버튼 간격 조정
-            "    position: absolute;"
-            "}"
-            ".button1 {"
-            "    left: 20%;"  # col1의 위치
-            "}"
-            ".button2 {"
-            "    left: 50%;"  # col2의 위치
-            "    transform: translateX(-50%);"  # 중앙 정렬
-            "}"
-            ".button3 {"
-            "    right: 20%;"  # col3의 위치
-            "}"
-            "</style>", unsafe_allow_html=True)
-
-st.divider()
-
-with st.markdown("<div class='button-container'>"):
-    st.write("<a href='https://www.lens-me.com/shop/' class='button button1'>INSTAGRAM</a>", unsafe_allow_html=True)
-    st.write("<a href='https://o-lens.com/' class='button button2'>BLOG</a>", unsafe_allow_html=True)
-    st.write("<a href='https://www.i-dol.kr/' class='button button3'>KAKAO CHANNEL</a>", unsafe_allow_html=True)
-
