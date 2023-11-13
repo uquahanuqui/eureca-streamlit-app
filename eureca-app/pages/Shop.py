@@ -48,7 +48,7 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("<div style='display: flex; margin-left: 220px;'><a href='https://www.instagram.com/lensingray.official/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True) 
+    st.markdown("<div style='display: flex; margin-left: 220px;'><a href='https://instagram.com/lensingray.official/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True) 
 
 with col2:
     st.write("<div style='display: flex; justify-content: center; margin-left: -25px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
@@ -68,12 +68,4 @@ st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span st
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
-
-with col1:
-    st.write("<div style='display: flex; margin-left: 220px;'><a id='instagram_link' href='javascript:void(0);' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
-    st.write("<script>")
-    st.write("document.getElementById('instagram_link').addEventListener('click', function() {")
-    st.write("    window.location.href = 'https://www.instagram.com/lensingray.official/';")
-    st.write("});")
-    st.write("</script>")
 
