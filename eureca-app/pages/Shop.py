@@ -48,11 +48,7 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    
-    if st.button("INSTAGRAM"):
-        webbrowser.open_new_tab('https://www.instagram.com/lensingray.official/')
-
-    st.markdown("<div style='display: flex; margin-left: 220px;'><a href='https://www.instagram.com/lensingray.official/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True) 
+    st.write("<div style='display: flex; margin-left: 220px;'><a href='https://www.instagram.com/lensingray.official/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True) 
 
 with col2:
     st.write("<div style='display: flex; justify-content: center; margin-left: -25px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
