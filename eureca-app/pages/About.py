@@ -7,7 +7,7 @@ st.markdown("<h1 style='text-align: center;'>About</h1>", unsafe_allow_html=True
 st.divider()
 
 #이미지 첨부
-img_url = "http://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
+img_url = "https://images.khan.co.kr/article/2023/09/23/news-p.v1.20230923.969810874c1f4bcb8a209cf6c722733c_P1.jpg"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
