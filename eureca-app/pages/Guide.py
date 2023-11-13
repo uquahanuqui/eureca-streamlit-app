@@ -102,6 +102,15 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 
+#
+st.write(" ")
+st.write(" ")
+st.write(" ")
+st.write(" ")
+st.markdown("<h1 style='text-align: center;'>❄️❄️❄️</h1>", unsafe_allow_html=True)
+st.write(" ")
+st.write(" ")
+
 #프로필
 st.divider()
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
