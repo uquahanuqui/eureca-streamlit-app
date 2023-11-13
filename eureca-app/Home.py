@@ -10,7 +10,7 @@ st.divider()
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
 #이미지 첨부
-img_url = "https://img-cdn.theqoo.net/vBnIvn.jpg"
+img_url = "https://image.ajunews.com/content/image/2023/03/07/20230307002159792573.jpg"
 st.image(img_url)
 
 
