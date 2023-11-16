@@ -40,13 +40,13 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write("<div style='position: absolute; left: 100px; top: 50px;'><a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
+    st.write("<div style='position: absolute; left: 100px; '><a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
     
 with col2:
-    st.write("<div style='position: absolute; left: 200px; top: 50px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
+    st.write("<div style='position: absolute; left: 200px; '><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
 
 with col3:
-    st.write("<div style='position: absolute; left: 300px; top: 50px;'><a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center; color: black;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
+    st.write("<div style='position: absolute; left: 300px; '><a href='https://www.i-dol.kr/' style='font-size: 14px; text-align: center; color: black;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
 
     
 st.write(" ")
