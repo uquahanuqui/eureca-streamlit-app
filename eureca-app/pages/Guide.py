@@ -143,7 +143,7 @@ st.markdown("""
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
-    <a href='https://o-lens.com/' 
+    <a href='https://blog.naver.com/lens_in_gray' 
        class='btn-link'>BLOG</a>
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
