@@ -33,18 +33,53 @@ st.write(" ")
 st.write(" ")
 
 #프로필
-st.divider()
-col1, col2, col3 = st.columns(3)
+# 전체 배경색을 흰색으로 설정
+st.write("""
+<style>
+    body {
+        background-color: white;
+    }
+    .btn-container {
+        display: flex;
+        justify-content: center;  # 가운데 정렬
+        align-items: center;  # 수직 가운데 정렬
+        gap: 10px;  # 버튼간의 간격 조절
+    }
+    .btn-link {
+        font-size: 14px;
+        text-align: center;
+        color: black !important;  # 글씨 색을 검정색으로 강제로 설정
+        background-color: transparent;  # 배경색을 투명하게 설정
+        border: 1px solid black;  # 테두리 추가
+        padding: 5px 10px;  # 버튼 내 여백 조절
+        text-decoration: none;  # 밑줄 제거
+    }
+</style>
+""", unsafe_allow_html=True)
 
-with col1:
-    st.write("<div style='display: flex; margin-left: 220px;'><a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
+# 세 개의 버튼 생성 (버튼 텍스트 사이에 공백 추가)
+st.markdown("""
+<div class="btn-container">
+    <a href='https://www.instagram.com/lensingray.official/' 
+       class='btn-link'>INSTAGRAM</a>
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <a href='https://o-lens.com/' 
+       class='btn-link'>BLOG</a>
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <a href='http://pf.kakao.com/_HBxnbG' 
+       class='btn-link'>KAKAO CHANNEL</a>
+</div>
+""", unsafe_allow_html=True)
 
-with col2:
-    st.write("<div style='display: flex; justify-content: center; margin-left: -25px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
 
-with col3:
-    st.write("<div style='display: flex; margin-left: -95px;'><a href='http://pf.kakao.com/_HBxnbG' style='font-size: 14px; text-align: center; color: black;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
-    
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 12px;'>Business Number</span> <span style='font-size: 15px;'>20230922</span> </p>", unsafe_allow_html=True)
