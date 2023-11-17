@@ -71,8 +71,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-
-streamlit run app.py
+print(df)
 
 
 # 스트림릿 타이틀 설정
