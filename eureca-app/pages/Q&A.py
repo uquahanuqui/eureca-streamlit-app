@@ -35,7 +35,8 @@ with st.expander("Q. 적립금 사용 최소 금액 및 기한이 궁금합니�
 with st.expander("Q.  AI Personal 추천이 정확한가요?"):
     st.text("이 칸은 기본적으로 접혀있습니다.")
 with st.expander("Q. 오프라인 쇼룸이 있나요?"):
-    st.text("렌즈 인 그레이는 아직 오프라인 쇼룸을 운영하지 않고 있습니다. 오프라인에도 제품들을 만나보실 수 있도록 부지런히 노력하도록 하겠습니다.")
+    st.text("렌즈 인 그레이는 아직 오프라인 쇼룸을 운영하지 않고 있습니다.")
+    st.text("오프라인에도 제품들을 만나보실 수 있도록 부지런히 노력하도록 하겠습니다.")
 
 st.markdown("---")
 st.markdown("<p style='font-size: 27px; font-weight: bold; margin: 0px 0;'>Q&A</p>", unsafe_allow_html=True)
