@@ -1,13 +1,3 @@
-Section (name="Cool apps", icon=":pig:"),
-Page ("example_app/example_four•py", "Example Four", "Ш"),
-Page ("example_app/example_two.py", "Example Two", "")
-
-
-
-
-
-
-
 
 import streamlit as st
 import pandas as pd
