@@ -105,7 +105,7 @@ from PIL import Image
 st.title('WEBP 이미지 표시')
 
 # WEBP 이미지의 경로
-image_path = 'C:/Users/sample.webp'  # 여기서는 원하는 WEBP 이미지 경로로 바꿔주세요
+image_path = '<img src="https://file.o-lens.com/prd_img/20672/a57f28ad-0b7a-494d-b7ba-e60ea9b5fb4b%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_br_L.png?w=90">'  # 여기서는 원하는 WEBP 이미지 경로로 바꿔주세요
 
 # 이미지를 열고 표시
 image = Image.open(image_path)
