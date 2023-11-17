@@ -49,6 +49,9 @@ st.markdown("""
        class='btn-link'>BLOG</a>
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='http://pf.kakao.com/_HBxnbG' 
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
