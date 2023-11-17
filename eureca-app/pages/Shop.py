@@ -16,9 +16,6 @@ if category == "Lens-me":
     st.write("Lens-me")
     st.link_button("Lens-me", "https://www.lens-me.com/shop/")
 
-import streamlit as st
-
-
 elif category == "O-lens":
     st.write("O-lens")
     st.link_button("O-lens", "https://o-lens.com/")
