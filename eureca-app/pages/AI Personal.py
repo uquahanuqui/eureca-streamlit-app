@@ -20,15 +20,16 @@ st.write("""
     .btn-container {
         display: flex;
         justify-content: center;  # 가운데 정렬
+        gap: 10px;  # 버튼간의 간격 조절
     }
     .btn-link {
         font-size: 14px;
         text-align: center;
-        color: black;
+        color: black;  # 글씨 색을 검정색으로 설정
         background-color: transparent;  # 배경색을 투명하게 설정
-        border: none;  # 테두리 제거
-        padding: 5px 10px;  # 버튼 주변의 여백 설정
-        margin: 0 5px;  # 각 버튼 사이의 간격 조절
+        border: 1px solid black;  # 테두리 추가
+        padding: 5px 10px;  # 버튼 내 여백 조절
+        text-decoration: none;  # 밑줄 제거
     }
 </style>
 """, unsafe_allow_html=True)
@@ -44,7 +45,6 @@ st.markdown("""
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
 """, unsafe_allow_html=True)
-
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
