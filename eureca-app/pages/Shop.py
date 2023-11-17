@@ -105,7 +105,7 @@ from PIL import Image
 st.title('WEBP 이미지 표시')
 
 # WEBP 이미지의 경로
-image_path = 'sample.webp'  # 여기서는 원하는 WEBP 이미지 경로로 바꿔주세요
+image_path = 'C:/Users/sample.webp'  # 여기서는 원하는 WEBP 이미지 경로로 바꿔주세요
 
 # 이미지를 열고 표시
 image = Image.open(image_path)
