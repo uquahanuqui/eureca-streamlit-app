@@ -16,7 +16,11 @@ st.divider()
 st.markdown("<p style='font-size: 27px; font-weight: bold; margin: 0px 0;'>FAQ</p>", unsafe_allow_html=True)
 st.markdown("---")
 with st.expander("Q. 실시간 문의가 가능한가요?"):
-    st.write("렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다. 월~금 11:00~17:00 / 점심시간 : 12:00~13:00 * 주말 및 공휴일 제외 * 업무시간 외에 전송된 메세지는 전달되지 않습니다. 이 경우 1:1 QnA 게시판을 통해 문의 부탁드립니다.")
+    st.text("렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.")
+    st.text("월~금 11:00~17:00")
+    st.text("점심시간 : 12:00~13:00")
+    st.text("* 주말 및 공휴일 제외")
+    st.text("* 업무시간 외에 전송된 메세지는 전달되지 않습니다. 이 경우 1:1 QnA 게시판을 통해 문의 부탁드립니다.")
 with st.expander("Q.  AI Personal 추천이 정확한가요?"):
     st.write("이 칸은 기본적으로 접혀있습니다.")
 with st.expander("Q. 오프라인 쇼룸이 있나요?"):
