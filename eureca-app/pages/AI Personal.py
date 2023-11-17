@@ -25,7 +25,7 @@ st.write("""
     .btn-link {
         font-size: 14px;
         text-align: center;
-        color: black;  # 글씨 색을 검정색으로 설정
+        color: black !important;  # 글씨 색을 검정색으로 강제로 설정
         background-color: transparent;  # 배경색을 투명하게 설정
         border: 1px solid black;  # 테두리 추가
         padding: 5px 10px;  # 버튼 내 여백 조절
@@ -45,6 +45,7 @@ st.markdown("""
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
 """, unsafe_allow_html=True)
+
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
