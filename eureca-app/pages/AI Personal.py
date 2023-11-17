@@ -20,6 +20,7 @@ st.write("""
     .btn-container {
         display: flex;
         justify-content: center;  # 가운데 정렬
+        align-items: center;  # 수직 가운데 정렬
         gap: 10px;  # 버튼간의 간격 조절
     }
     .btn-link {
