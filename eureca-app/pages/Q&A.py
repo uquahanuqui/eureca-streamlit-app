@@ -60,7 +60,7 @@ st.write(" ")
 
 with st.expander("Q. 실시간 문의가 가능한가요?"):
     st.markdown("""
-    <p style="margin: 5px 0; line-height: 1;">
+    <p style="margin: 8px 0; line-height: 1;">
         렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.<br>
         월~금 11:00~17:00<br>
         점심시간 : 12:00~13:00<br>
