@@ -58,6 +58,27 @@ if uploaded_file is not None:
     # 이미지 표시
     st.image(image, caption='업로드된 이미지', use_column_width=True)
 
+import streamlit as st
+import pandas as pd
+
+# 데이터를 DataFrame으로 변환
+data = {
+    "Product Name": ["빅글로이 모카브라운", "빅글로이 헤이즐", "샤인터치 밀키 브라운", "샤인터치 밀키 그레이", "샤인터치 밀키 초코", 
+                    "퓨어틴 브라운", "퓨어틴 초코", "글로이 내츄럴 라떼브라운", "글로이 내츄럴 모카브라운", "더블틴트 그레이"],
+    "Description": ["13.6mm (1Month 권장)", "13.6mm (1Month 권장)", "12.7mm (1Month 권장)", "12.7mm (1Month 권장)", 
+                    "12.7mm (1Month 권장)", "12.8mm (1Month 권장)", "12.8mm (1Month 권장)", "13.0mm (1Month 권장)", 
+                    "13.0mm (1Month 권장)", "12.9mm (1Month 권장)"]
+}
+
+df = pd.DataFrame(data)
+
+# 스트림릿 타이틀 설정
+st.title('제품 목록')
+
+# 데이터를 테이블로 표시
+st.table(df)
+
+
 
 
 #프로필
