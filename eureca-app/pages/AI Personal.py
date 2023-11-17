@@ -6,6 +6,10 @@ st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_htm
 #구분선
 st.divider()
 
+#링크 버튼
+st.link_button("카카오 채널", "http://pf.kakao.com/_HBxnbG")
+st.link_button("채팅 바로가기", "http://pf.kakao.com/_HBxnbG/chat")
+
 #프로필
 st.divider()
 col1, col2, col3 = st.columns(3)
