@@ -10,7 +10,7 @@ st.divider()
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
 #이미지 첨부
-img_url = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmobile.newsis.com%2Fview.html%3Far_id%3DNISX20220814_0001978315&psig=AOvVaw2dxdRRa9ddv62KE23yELMe&ust=1700279679007000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCuhMSRyoIDFQAAAAAdAAAAABAE"
+img_url = "https://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
