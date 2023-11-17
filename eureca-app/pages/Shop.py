@@ -2,41 +2,6 @@
 import streamlit as st
 import pandas as pd
 
-#타이틀 & 이모티콘
-st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
-
-#구분선
-st.divider()
-
-#메뉴
-category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
-
-# 각 카테고리에 대한 페이지를 표시
-if category == "Lens-me":
-    st.write("Lens-me")
-    st.link_button("Lens-me", "https://www.lens-me.com/shop/")
-    img_url = "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
-
-
-elif category == "O-lens":
-    st.write("O-lens")
-    st.link_button("O-lens", "https://o-lens.com/")
-
-elif category == "Idol-lens":
-    st.write("Idol-lens")
-    st.link_button("Idol-lens", "https://www.i-dol.kr/")
-
-elif category == "HapaKristin":
-    st.write("HapaKristin")
-    st.link_button("HapaKristin", "https://hapakristin.co.kr/")
-
-
-
-import streamlit as st
-import pandas as pd
-from PIL import Image
-import requests
-from io import BytesIO
 
 
 
