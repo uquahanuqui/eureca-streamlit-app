@@ -13,6 +13,9 @@ st.write("Team 6 : uquahanuqui :christmas_tree:")
 st.write(" ")
 img_url = "https://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
 
+img_url = "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
+
+
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
     display: flex;
