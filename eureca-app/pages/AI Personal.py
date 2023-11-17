@@ -11,18 +11,54 @@ st.link_button("카카오 채널", "http://pf.kakao.com/_HBxnbG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_HBxnbG/chat")
 
 #프로필
-st.divider()
+# 고정된 상단 바 생성
+st.write("""
+<style>
+    .stApp {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# 세 개의 버튼 생성
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("[INSTAGRAM](https://www.instagram.com/lensingray.official/)", unsafe_allow_html=True)
+    st.markdown("""
+        <div style="text-align: center;">
+            <a href='https://www.instagram.com/lensingray.official/' 
+               style='font-size: 14px; text-align: center; color: black;'>
+               <button style="background-color: transparent; border: none;">INSTAGRAM</button>
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("[BLOG](https://o-lens.com/)", unsafe_allow_html=True)
+    st.markdown("""
+        <div style="text-align: center;">
+            <a href='https://o-lens.com/' 
+               style='font-size: 14px; text-align: center; color: black;'>
+               <button style="background-color: transparent; border: none;">BLOG</button>
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
 with col3:
-    st.markdown("[KAKAO CHANNEL](http://pf.kakao.com/_HBxnbG)", unsafe_allow_html=True)
-
+    st.markdown("""
+        <div style="text-align: center;">
+            <a href='http://pf.kakao.com/_HBxnbG' 
+               style='font-size: 14px; text-align: center; color: black;'>
+               <button style="background-color: transparent; border: none;">KAKAO CHANNEL</button>
+            </a>
+        </div>
+    """, unsafe_allow_html=True)
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
