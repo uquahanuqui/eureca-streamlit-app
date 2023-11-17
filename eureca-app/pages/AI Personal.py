@@ -35,13 +35,15 @@ st.write("""
 </style>
 """, unsafe_allow_html=True)
 
-# 세 개의 버튼 생성
+# 세 개의 버튼 생성 (버튼 텍스트 사이에 공백 추가)
 st.markdown("""
 <div class="btn-container">
     <a href='https://www.instagram.com/lensingray.official/' 
        class='btn-link'>INSTAGRAM</a>
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='https://o-lens.com/' 
        class='btn-link'>BLOG</a>
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='http://pf.kakao.com/_HBxnbG' 
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
