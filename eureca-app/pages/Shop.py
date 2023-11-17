@@ -32,15 +32,6 @@ elif category == "HapaKristin":
 import streamlit as st
 import pandas as pd
 
-# Image URLs
-image_urls = [
-    "https://file.o-lens.com/prd_img/20670/547bb379-1c08-46f8-b77b-bb7428153d45%ED%93%A8%EC%96%B4%ED%8B%B4_SUM_ch.jpg?w=330",
-    "https://file.o-lens.com/prd_img/20670/dde68f3a-dc5b-4ada-8782-6f8bfe2afbc0%ED%93%A8%EC%96%B4%ED%8B%B4_L_ch.png?w=90",
-    "https://file.o-lens.com/prd_img/20650/672c9c08-e8f3-425a-ba93-bc8275381bdcSUM_%EB%9D%BC%EB%96%BC%EB%B8%8C%EB%9D%BC%EC%9A%B4.jpg?w=330",
-    "https://file.o-lens.com/prd_img/20650/7acdde5c-7224-4695-aa4e-ee805e259efbL_%EB%9D%BC%EB%96%BC%EB%B8%8C%EB%9D%BC%EC%9A%B4.png?w=90",
-    "https://file.o-lens.com/prd_img/20651/7aeb28d8-746b-4008-a6b8-87b8ce3972acSUM_%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%9D%BC%EC%9A%B4.jpg?w=330",
-    "https://file.o-lens.com/prd_img/20651/b464f894-2efa-43c2-8be0-1230eb41cf21L_%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%9D%BC%EC%9A%B4.png?w=90"
-]
 
 # Product name and diameter data
 data = {
