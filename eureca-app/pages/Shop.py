@@ -15,6 +15,8 @@ category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "Hapa
 if category == "Lens-me":
     st.write("Lens-me")
     st.link_button("Lens-me", "https://www.lens-me.com/shop/")
+    img_url = "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
+
 
 elif category == "O-lens":
     st.write("O-lens")
