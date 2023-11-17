@@ -19,60 +19,43 @@ st.write("""
     }
     .stApp {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;  # 버튼들을 왼쪽부터 오른쪽으로 나란히 정렬합니다.
+        align-items: center;  # 버튼들을 수직 가운데 정렬합니다.
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         background-color: transparent;
-        padding: 10px 0;
+        padding: 10px 20px;  # 좌우 여백을 조절합니다.
     }
     .btn-link {
         font-size: 14px;
         text-align: center;
         color: black;
-        margin: 0 2px;  # 텍스트 간의 간격을 조절합니다.
-        padding: 2px 5px;  # 버튼 주변의 여백을 조절합니다.
+        margin: 0;  # 텍스트 간의 간격을 없앱니다.
+        padding: 0;  # 버튼 주변의 여백을 없앱니다.
         text-decoration: none;  # 밑줄을 제거합니다.
-    }
-    .btn-link:hover {
-        background-color: #f0f0f0;  # 마우스를 올렸을 때 배경색 변경
     }
 </style>
 """, unsafe_allow_html=True)
 
 # 세 개의 버튼 생성
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href='https://www.instagram.com/lensingray.official/' 
-               class='btn-link' style='color: black;'>
-               INSTAGRAM
-            </a>
-        </div>
-    """, unsafe_allow_html=True)
-
-with col2:
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href='https://o-lens.com/' 
-               class='btn-link' style='color: black;'>
-               BLOG
-            </a>
-        </div>
-    """, unsafe_allow_html=True)
-
-with col3:
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href='http://pf.kakao.com/_HBxnbG' 
-               class='btn-link' style='color: black;'>
-               KAKAO CHANNEL
-            </a>
-        </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+<div class="stApp">
+    <a href='https://www.instagram.com/lensingray.official/' 
+       class='btn-link' style='color: black;'>
+       INSTAGRAM
+    </a>
+    <a href='https://o-lens.com/' 
+       class='btn-link' style='color: black;'>
+       BLOG
+    </a>
+    <a href='http://pf.kakao.com/_HBxnbG' 
+       class='btn-link' style='color: black;'>
+       KAKAO CHANNEL
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
