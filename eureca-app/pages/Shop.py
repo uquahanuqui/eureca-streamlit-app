@@ -32,100 +32,16 @@ elif category == "HapaKristin":
 import streamlit as st
 import pandas as pd
 
-
-# Product name and diameter data
+# 데이터를 DataFrame으로 변환
 data = {
-    "products__product-name": [
-        "Big Gloy Mocha Brown",
-        "Big Gloy Hazel",
-        "Shine Touch Milky Brown",
-        "Shine Touch Milky Gray",
-        "Shine Touch Milky Choco",
-        "Puretin Brown",
-        "Puretin Chocolate",
-        "Gloy Natural Latte Brown",
-        "Gloy Natural Mocha Brown",
-        "Double Tint Gray",
-        "Double Tint Brown",
-        "French Shine Hazel",
-        "French Shine Gray",
-        "Jennifer 3-Con Olive",
-        "Jennifer 3 Con Gray",
-        "Jennifer 3 Con Hazel",
-        "Plum chocolate",
-        "Coming Chocolate",
-        "And Black",
-        "Neil's Gray",
-        "Neil's Brown",
-        "Rowling Gray",
-        "Rowling Brown",
-        "Moodnight Mood Gray",
-        "Moodnight Mood Brown",
-        "Wannabe Camel Brown",
-        "Wannabe Humming Brown",
-        "Bibeering Brown",
-        "Symphony 3-Con Hazel",
-        "Bea-ring Gray",
-        "Symphony 3-con Gray",
-        "Bibi ring chocolate",
-        "It's chocolate",
-        "It's Black",
-        "Symphony 3-Con Green",
-        "Bibi ring pink",
-        "Gloy Brown",
-        "Bibi 3 Con Brown",
-        "Beeping Beige",
-        "Skandi Hazel"
-    ],
-    "products__product-desc": [
-        "13.6 mm (1Month recommended)",
-        "13.6 mm (1Month recommended)",
-        "12.7 mm (1 Month Recommended)",
-        "12.7 mm (1 Month Recommended)",
-        "12.7mm (1Month recommended)",
-        "12.8 mm (1Month recommended)",
-        "12.8mm (1Month recommended)",
-        "13.0 mm (1 Month Recommended)",
-        "13.0 mm (1 Month Recommended)",
-        "12.9 mm (1Month recommended)",
-        "12.9 mm (1Month recommended)",
-        "13.2 mm (1 Month Recommended)",
-        "13.2 mm (1Month recommended)",
-        "13.3 mm (1 Month Recommended)",
-        "13.3 mm (1Month recommended)",
-        "13.3 mm (1 Month Recommended)",
-        "13.2 mm (1 Month recommended)",
-        "13.8 mm (1 Month recommended)",
-        "13.3 mm (1 Month recommended)",
-        "13.5 mm (1 Month Recommended)",
-        "13.5 mm (1 Month Recommended)",
-        "12.5 mm (1 Month Recommended)",
-        "12.5 mm (1 Month Recommended)",
-        "13.3 mm (1 Month recommended)",
-        "13.3 mm (1 Month recommended)",
-        "13.3 mm (1 Month Recommended)",
-        "13.0 mm (1 Month Recommended)",
-        "13.0 mm (1Month recommended)",
-        "13.0 mm (1 Month recommended)",
-        "13.5 mm (1 Month Recommended)",
-        "13.0 mm (1Month recommended)",
-        "13.5 mm (1 Month Recommended)",
-        "13.0mm (1Month recommended)",
-        "12.9mm (1Month recommended)",
-        "13.1 mm (1Month recommended)",
-        "13.5 mm (1 Month Recommended)",
-        "13.0 mm (1Month recommended)",
-        "13.1 mm (1 Month Recommended)",
-        "13.8 mm (1Month recommended)",
-        "13.0 mm (1 Month recommended)",
-        "11.9 mm (1 Month Recommended)"
-    ]
+    "Product Name": ["빅글로이 모카브라운", "빅글로이 헤이즐", "샤인터치 밀키 브라운", "샤인터치 밀키 그레이", "샤인터치 밀키 초코", 
+                    "퓨어틴 브라운", "퓨어틴 초코", "글로이 내츄럴 라떼브라운", "글로이 내츄럴 모카브라운", "더블틴트 그레이"],
+    "Description": ["13.6mm (1Month 권장)", "13.6mm (1Month 권장)", "12.7mm (1Month 권장)", "12.7mm (1Month 권장)", 
+                    "12.7mm (1Month 권장)", "12.8mm (1Month 권장)", "12.8mm (1Month 권장)", "13.0mm (1Month 권장)", 
+                    "13.0mm (1Month 권장)", "12.9mm (1Month 권장)"]
 }
 
-# Create a DataFrame
 df = pd.DataFrame(data)
-
-# Display the DataFrame
 print(df)
 
 
