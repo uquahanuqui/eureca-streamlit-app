@@ -31,8 +31,8 @@ st.write("""
         font-size: 14px;
         text-align: center;
         color: black;
-        margin: 0 2px;  # 텍스트 간의 간격을 더욱 좁게 조절합니다.
-        padding: 3px 5px;  # 버튼 주변의 여백을 조절합니다.
+        margin: 0 2px;  # 텍스트 간의 간격을 조절합니다.
+        padding: 2px 5px;  # 버튼 주변의 여백을 조절합니다.
         text-decoration: none;  # 밑줄을 제거합니다.
     }
 </style>
@@ -70,6 +70,7 @@ with col3:
             </a>
         </div>
     """, unsafe_allow_html=True)
+
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
