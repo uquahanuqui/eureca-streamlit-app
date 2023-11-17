@@ -16,27 +16,54 @@ st.divider()
 st.markdown("<p style='font-size: 27px; font-weight: bold; margin: 0px 0;'>FAQ</p>", unsafe_allow_html=True)
 st.markdown("---")
 with st.expander("Q. 실시간 문의가 가능한가요?"):
-    st.text("렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.")
-    st.text("월~금 11:00~17:00")
-    st.text("점심시간 : 12:00~13:00")
-    st.text("* 주말 및 공휴일 제외")
-    st.text("* 업무시간 외에 전송된 메세지는 전달되지 않습니다.")
-    st.text(" 이 경우 1:1 QnA 게시판을 통해 문의 부탁드립니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-height: 1.5;">
+        렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.<br>
+        월~금 11:00~17:00<br>
+        점심시간 : 12:00~13:00<br>
+        * 주말 및 공휴일 제외<br>
+        * 업무시간 외에 전송된 메세지는 전달되지 않습니다.
+    </p>
+    """, unsafe_allow_html=True)
 with st.expander("Q. 무통장 입금 기한이 궁금합니다."):
-    st.text("무통장 입금 기한은 주문 후 24시간입니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-height: 1.5;">
+        무통장 입금 기한은 주문 후 24시간입니다.
+    </p>
+    """, unsafe_allow_html=True)
 with st.expander("Q. 무통장 입금 확인이 되지 않습니다."):
-    st.text("입금자명과 주문자명이 일치하지 않을 경우 자동 입금 확인이 되지 않습니다.")
-    st.text("이 경우 1:1 QnA 게시판 혹은 카카오톡 채널을 통해 문의 부탁드립니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-hei
+     입금자명과 주문자명이 일치하지 않을 경우 자동 입금 확인이 되지 않습니다.무통장 입금 기한은 주문 후 24시간입니다.<br>
+     이 경우 1:1 QnA 게시판 혹은 카카오톡 채널을 통해 문의 부탁드립니다.
+    </p>
+    """, unsafe_allow_html=True)
 with st.expander("Q. 결제수단을 변경하고 싶습니다."):
-    st.text("결제수단 변경은 저희 측에서 처리해드리기 어렵습니다.")
-    st.text("결제수단 변경을 원하시는 경우 기존 주문서를 취소하고 새로운 주문서를 작성해주셔야 합니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-hei
+     결제수단 변경은 저희 측에서 처리해드리기 어렵습니다.<br>
+     결제수단 변경을 원하시는 경우 기존 주문서를 취소하고 새로운 주문서를 작성해주셔야 합니다.
+    </p>
+    """, unsafe_allow_html=True)
 with st.expander("Q. 적립금 사용 최소 금액 및 기한이 궁금합니다."):
-    st.text("지급된 적립금은 최소 금액 및 사용 기한에 관계없이 자유롭게 사용이 가능합니다.")
-with st.expander("Q.  AI Personal 추천이 정확한가요?"):
-    st.text("이 칸은 기본적으로 접혀있습니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-hei
+     지급된 적립금은 최소 금액 및 사용 기한에 관계없이 자유롭게 사용이 가능합니다.
+    </p>
+    """, unsafe_allow_html=True)
+with st.expander("Q. AI Personal 추천이 정확한가요?"):
+    st.markdown("""
+    <p style="margin: 5px 0; line-hei
+     이 칸은 기본적으로 접혀있습니다.
+    </p>
+    """, unsafe_allow_html=True)
 with st.expander("Q. 오프라인 쇼룸이 있나요?"):
-    st.text("렌즈 인 그레이는 아직 오프라인 쇼룸을 운영하지 않고 있습니다.")
-    st.text("오프라인에도 제품들을 만나보실 수 있도록 부지런히 노력하도록 하겠습니다.")
+    st.markdown("""
+    <p style="margin: 5px 0; line-hei
+     렌즈 인 그레이는 아직 오프라인 쇼룸을 운영하지 않고 있습니다.<br>
+     오프라인에도 제품들을 만나보실 수 있도록 부지런히 노력하도록 하겠습니다.
+    </p>
+    """, unsafe_allow_html=True)
 
 st.markdown("---")
 st.markdown("<p style='font-size: 27px; font-weight: bold; margin: 0px 0;'>Q&A</p>", unsafe_allow_html=True)
@@ -56,23 +83,6 @@ st.write(" ")
 st.markdown("<h1 style='text-align: center;'>❄️❄️❄️</h1>", unsafe_allow_html=True)
 st.write(" ")
 st.write(" ")
-
-
-with st.expander("Q. 실시간 문의가 가능한가요?"):
-    st.markdown("""
-    <p style="margin: 5px 0; line-height: 1.5;">
-        렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.<br>
-        월~금 11:00~17:00<br>
-        점심시간 : 12:00~13:00<br>
-        * 주말 및 공휴일 제외<br>
-        * 업무시간 외에 전송된 메세지는 전달되지 않습니다.
-    </p>
-    """, unsafe_allow_html=True)
-
-
-
-
-
 
 #프로필
 st.markdown("---")
