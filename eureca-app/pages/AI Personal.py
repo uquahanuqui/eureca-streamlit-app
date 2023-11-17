@@ -31,8 +31,9 @@ st.write("""
         font-size: 14px;
         text-align: center;
         color: black;
-        margin: 0 5px;  # 텍스트 간의 간격을 조절합니다.
-        padding: 5px;
+        margin: 0 2px;  # 텍스트 간의 간격을 더욱 좁게 조절합니다.
+        padding: 3px 5px;  # 버튼 주변의 여백을 조절합니다.
+        text-decoration: none;  # 밑줄을 제거합니다.
     }
 </style>
 """, unsafe_allow_html=True)
@@ -44,7 +45,7 @@ with col1:
     st.markdown("""
         <div style="text-align: center;">
             <a href='https://www.instagram.com/lensingray.official/' 
-               class='btn-link'>
+               class='btn-link' style='color: black;'>
                INSTAGRAM
             </a>
         </div>
@@ -54,7 +55,7 @@ with col2:
     st.markdown("""
         <div style="text-align: center;">
             <a href='https://o-lens.com/' 
-               class='btn-link'>
+               class='btn-link' style='color: black;'>
                BLOG
             </a>
         </div>
@@ -64,7 +65,7 @@ with col3:
     st.markdown("""
         <div style="text-align: center;">
             <a href='http://pf.kakao.com/_HBxnbG' 
-               class='btn-link'>
+               class='btn-link' style='color: black;'>
                KAKAO CHANNEL
             </a>
         </div>
