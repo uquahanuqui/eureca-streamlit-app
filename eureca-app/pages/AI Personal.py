@@ -42,6 +42,9 @@ st.markdown("""
        class='btn-link'>INSTAGRAM</a>
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='https://o-lens.com/' 
        class='btn-link'>BLOG</a>
     <span>&nbsp;</span>  <!-- 공백 추가 -->
