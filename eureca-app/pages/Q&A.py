@@ -15,7 +15,8 @@ st.divider()
 #글씨
 st.markdown("<p style='font-size: 27px; font-weight: bold; margin: 0px 0;'>FAQ</p>", unsafe_allow_html=True)
 st.markdown("---")
-st.write("Q. 실시간 문의가 가능한가요?")
+with st.beta_expander("Q. 실시간 문의가 가능한가요?"):
+    st.write("이 칸은 기본적으로 접혀있습니다.")
 st.write("Q. AI Personal 추천이 정확한가요?")
 st.write("Q. 오프라인 쇼룸이 있나요?")
 
