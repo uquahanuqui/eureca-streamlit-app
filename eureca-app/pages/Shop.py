@@ -9,18 +9,20 @@ st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
 st.divider()
 
 #메뉴
-# 사이드바에 카테고리 선택 옵션을 추가
-category = st.sidebar.selectbox("카테고리 선택", ["카테고리1", "카테고리2", "카테고리3"])
+category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
 
 # 각 카테고리에 대한 페이지를 표시
-if category == "카테고리1":
-    st.write("이것은 카테고리1 페이지입니다.")
+if category == "Lens-me":
+    st.write("Lens-me")
 
-elif category == "카테고리2":
-    st.write("이것은 카테고리2 페이지입니다.")
+elif category == "O-lens":
+    st.write("O-lens")
 
-elif category == "카테고리3":
-    st.write("이것은 카테고리3 페이지입니다.")
+elif category == "Idol-lens":
+    st.write("Idol-lens")
+
+elif category == "HapaKristin":
+    st.write("HapaKristin")
 
 
 #버튼 클릭
