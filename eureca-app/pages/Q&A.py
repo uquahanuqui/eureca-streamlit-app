@@ -26,16 +26,6 @@ with st.expander("Q. 실시간 문의가 가능한가요?"):
     </p>
     """, unsafe_allow_html=True)
 
-# 접힌 칸 제목에 스타일을 적용하여 글자 색상을 변경
-st.markdown("""
-<style>
-    .expander-header:hover {
-        color: skyblue !important;
-    }
-</style>
-""", unsafe_allow_html=True)
-
-# 접혀있는 칸 생성
 with st.expander("Q. 무통장 입금 기한이 궁금합니다."):
     st.markdown("""
     <p style="margin: 5px 0; line-height: 1.5;">
