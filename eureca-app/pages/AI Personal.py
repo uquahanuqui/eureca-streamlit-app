@@ -11,9 +11,12 @@ st.link_button("카카오 채널", "http://pf.kakao.com/_HBxnbG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_HBxnbG/chat")
 
 #프로필
-# 고정된 상단 바 생성
+# 전체 배경색을 흰색으로 설정
 st.write("""
 <style>
+    body {
+        background-color: white;
+    }
     .stApp {
         display: flex;
         justify-content: space-around;
@@ -21,8 +24,15 @@ st.write("""
         top: 0;
         left: 0;
         right: 0;
-        background-color: #f0f0f0;
+        background-color: transparent;
         padding: 10px 0;
+    }
+    .btn-link {
+        font-size: 14px;
+        text-align: center;
+        color: black;
+        margin: 0 5px;  # 텍스트 간의 간격을 조절합니다.
+        padding: 5px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -34,8 +44,8 @@ with col1:
     st.markdown("""
         <div style="text-align: center;">
             <a href='https://www.instagram.com/lensingray.official/' 
-               style='font-size: 14px; text-align: center; color: black;'>
-               <button style="background-color: transparent; border: none;">INSTAGRAM</button>
+               class='btn-link'>
+               INSTAGRAM
             </a>
         </div>
     """, unsafe_allow_html=True)
@@ -44,8 +54,8 @@ with col2:
     st.markdown("""
         <div style="text-align: center;">
             <a href='https://o-lens.com/' 
-               style='font-size: 14px; text-align: center; color: black;'>
-               <button style="background-color: transparent; border: none;">BLOG</button>
+               class='btn-link'>
+               BLOG
             </a>
         </div>
     """, unsafe_allow_html=True)
@@ -54,8 +64,8 @@ with col3:
     st.markdown("""
         <div style="text-align: center;">
             <a href='http://pf.kakao.com/_HBxnbG' 
-               style='font-size: 14px; text-align: center; color: black;'>
-               <button style="background-color: transparent; border: none;">KAKAO CHANNEL</button>
+               class='btn-link'>
+               KAKAO CHANNEL
             </a>
         </div>
     """, unsafe_allow_html=True)
