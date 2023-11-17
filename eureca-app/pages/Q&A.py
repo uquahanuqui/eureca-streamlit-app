@@ -6,7 +6,7 @@ st.markdown("<h1 style='text-align: center;'>Q&A</h1>", unsafe_allow_html=True)
 #안내
 st.markdown("---")
 st.write("Call 82+10 4536 6713 (11:00 ~ 17:00 / 13:00 ~ 14:00 점심시간)")
-st.write("Email hyb0320@kookmin.ac.kr")
+st.text("Email hyb0320@kookmin.ac.kr")
 st.write("Kakaotalk 11:00 ~ 17:00 (13:00 ~ 14:00 점심시간)")
 
 #구분선
