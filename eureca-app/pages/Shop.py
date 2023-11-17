@@ -36,41 +36,11 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-# 데이터를 DataFrame으로 변환
-data = {
-    "Product Name": [
-        "빅글로이 모카브라운", "빅글로이 헤이즐", "샤인터치 밀키 브라운", "샤인터치 밀키 그레이", "샤인터치 밀키 초코",
-        "퓨어틴 브라운", "퓨어틴 초코", "글로이 내츄럴 라떼브라운", "글로이 내츄럴 모카브라운", "더블틴트 그레이"
-    ],
-    "Description": [
-        "13.6mm (1Month 권장)", "13.6mm (1Month 권장)", "12.7mm (1Month 권장)", "12.7mm (1Month 권장)",
-        "12.7mm (1Month 권장)", "12.8mm (1Month 권장)", "12.8mm (1Month 권장)", "13.0mm (1Month 권장)",
-        "13.0mm (1Month 권장)", "12.9mm (1Month 권장)"
-    ],
-    "Image URL": [
-        "https://file.o-lens.com/prd_img/20685/0c4eca8c-367c-49cf-b071-92df020e974dSUM_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_mo.jpg",
-        "https://file.o-lens.com/prd_img/20685/7cedd834-b9fb-43e5-b822-a650343aefe9L_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_mo.png",
-        "https://file.o-lens.com/prd_img/20686/a5300d10-b1ac-4c81-af24-dd99aa7247b4SUM_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_ha.jpg",
-        "https://file.o-lens.com/prd_img/20686/7e58906d-4063-4cbb-ba76-22418b0a818fL_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_ha.png",
-        "https://file.o-lens.com/prd_img/20672/32515051-7778-4712-8606-13eed608437c%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_br_SUM.jpg",
-        "https://file.o-lens.com/prd_img/20672/a57f28ad-0b7a-494d-b7ba-e60ea9b5fb4b%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_br_L.png",
-        "https://file.o-lens.com/prd_img/20674/767bbdd3-06a0-4dc9-aff2-59ac0554ca3c%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_gr_SUM.jpg",
-        "https://file.o-lens.com/prd_img/20674/106df24d-e909-43fd-98b8-242207488576%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_gr_L.png",
-        "https://file.o-lens.com/prd_img/20673/93a95b98-57c0-4785-9c12-1f7656ffc18f%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_SUM.jpg",
-        "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
-    ]
-}
 
-df = pd.DataFrame(data)
 
-# 이미지를 표시
-for img_url in df["Image URL"]:
-    response = requests.get(img_url)
-    img = Image.open(BytesIO(response.content))
-    st.image(img, use_container_width=True)
-
-# DataFrame을 표시
-st.dataframe(df.drop("Image URL", axis=1))
+#이미지 첨부
+st.write(" ")
+img_url = "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
 
 
 
