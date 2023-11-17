@@ -28,8 +28,13 @@ elif category == "HapaKristin":
     st.write("HapaKristin")
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
+
+
 import streamlit as st
 import pandas as pd
+from PIL import Image
+import requests
+from io import BytesIO
 
 # 데이터를 DataFrame으로 변환
 data = {
@@ -42,7 +47,7 @@ data = {
         "12.7mm (1Month 권장)", "12.8mm (1Month 권장)", "12.8mm (1Month 권장)", "13.0mm (1Month 권장)",
         "13.0mm (1Month 권장)", "12.9mm (1Month 권장)"
     ],
-    "Image": [
+    "Image URL": [
         "https://file.o-lens.com/prd_img/20685/0c4eca8c-367c-49cf-b071-92df020e974dSUM_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_mo.jpg?w=330",
         "https://file.o-lens.com/prd_img/20685/7cedd834-b9fb-43e5-b822-a650343aefe9L_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_mo.png?w=90",
         "https://file.o-lens.com/prd_img/20686/a5300d10-b1ac-4c81-af24-dd99aa7247b4SUM_%EB%B9%85%EA%B8%80%EB%A1%9C%EC%9D%B4_ha.jpg?w=330",
@@ -59,17 +64,13 @@ data = {
 df = pd.DataFrame(data)
 
 # 이미지를 표시
-for img_url in df["Image"]:
-    st.image(img_url, use_container_width=True)
+for img_url in df["Image URL"]:
+    response = requests.get(img_url)
+    img = Image.open(BytesIO(response.content))
+    st.image(img, use_container_width=True)
 
 # DataFrame을 표시
-st.dataframe(df.drop("Image", axis=1))
-
-
-
-
-
-
+st.dataframe(df.drop("Image URL", axis=1))
 
 
 
