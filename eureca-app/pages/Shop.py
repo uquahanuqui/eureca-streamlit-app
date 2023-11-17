@@ -126,7 +126,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Display the DataFrame
-st.dataframe(df)
+print(df)
 
 
 
