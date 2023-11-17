@@ -15,13 +15,14 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write("<div style='display: flex; margin-left: 220px;'><a href='https://www.lens-me.com/shop/' style='font-size: 14px; text-align: center; color: black;'>INSTAGRAM</a></div>", unsafe_allow_html=True)
+    st.markdown("[INSTAGRAM](https://www.instagram.com/lensingray.official/)", unsafe_allow_html=True)
 
 with col2:
-    st.write("<div style='display: flex; justify-content: center; margin-left: -25px;'><a href='https://o-lens.com/' style='font-size: 14px; text-align: center; color: black;'>BLOG</a></div>", unsafe_allow_html=True)
+    st.markdown("[BLOG](https://o-lens.com/)", unsafe_allow_html=True)
 
 with col3:
-    st.write("<div style='display: flex; margin-left: -95px;'><a href='http://pf.kakao.com/_HBxnbG' style='font-size: 14px; text-align: center; color: black;'>KAKAO CHANNEL</a></div>", unsafe_allow_html=True)
+    st.markdown("[KAKAO CHANNEL](http://pf.kakao.com/_HBxnbG)", unsafe_allow_html=True)
+
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
