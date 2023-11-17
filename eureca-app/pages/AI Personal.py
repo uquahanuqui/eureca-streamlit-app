@@ -35,6 +35,9 @@ st.write("""
         padding: 2px 5px;  # 버튼 주변의 여백을 조절합니다.
         text-decoration: none;  # 밑줄을 제거합니다.
     }
+    .btn-link:hover {
+        background-color: #f0f0f0;  # 마우스를 올렸을 때 배경색 변경
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -70,7 +73,6 @@ with col3:
             </a>
         </div>
     """, unsafe_allow_html=True)
-
 
 st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>Lens in Gray</span> <span style='font-size: 15px;'>Co.</span> <span style='font-size: 12px;'>Owner</span> <span style='font-size: 15px;'>Uquahanuqui</span> </p>", unsafe_allow_html=True)
