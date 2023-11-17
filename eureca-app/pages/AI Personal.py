@@ -43,17 +43,11 @@ st.write("""
 st.markdown("""
 <div class="stApp">
     <a href='https://www.instagram.com/lensingray.official/' 
-       class='btn-link' style='color: black;'>
-       INSTAGRAM
-    </a>
+       class='btn-link' style='color: black;'>INSTAGRAM</a>
     <a href='https://o-lens.com/' 
-       class='btn-link' style='color: black;'>
-       BLOG
-    </a>
+       class='btn-link' style='color: black;'>BLOG</a>
     <a href='http://pf.kakao.com/_HBxnbG' 
-       class='btn-link' style='color: black;'>
-       KAKAO CHANNEL
-    </a>
+       class='btn-link' style='color: black;'>KAKAO CHANNEL</a>
 </div>
 """, unsafe_allow_html=True)
 
