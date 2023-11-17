@@ -41,8 +41,10 @@ st.markdown("""
     <a href='https://www.instagram.com/lensingray.official/' 
        class='btn-link'>INSTAGRAM</a>
     <span>&nbsp;</span>  <!-- 공백 추가 -->
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='https://o-lens.com/' 
        class='btn-link'>BLOG</a>
+    <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <a href='http://pf.kakao.com/_HBxnbG' 
        class='btn-link'>KAKAO CHANNEL</a>
