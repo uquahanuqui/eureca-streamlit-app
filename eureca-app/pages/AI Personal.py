@@ -11,6 +11,7 @@ st.link_button("카카오 채널", "http://pf.kakao.com/_HBxnbG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_HBxnbG/chat")
 
 #프로필
+st.markdown("---")
 # 전체 배경색을 흰색으로 설정
 st.write("""
 <style>
