@@ -29,82 +29,115 @@ elif category == "HapaKristin":
     st.link_button("HapaKristin", "https://hapakristin.co.kr/")
 
 
-import pandas as pd
-
-def main():
-    st.title('CSV 파일 업로드')
-
-    # 파일 업로더 위젯을 만듭니다.
-    uploaded_file = st.file_uploader("CSV 파일을 업로드하세요", type=['csv'])
-
-    if uploaded_file:
-        # Pandas를 사용하여 CSV 파일을 데이터프레임으로 읽습니다.
-        df = pd.read_csv(uploaded_file)
-
-        # 데이터프레임을 스트림릿에 표시합니다.
-        st.dataframe(df)
-
-if __name__ == "__main__":
-    main()
-
-
-import streamlit as st
-from PIL import Image
-
-# 타이틀 설정
-st.title('PNG 파일 뷰어')
-
-# 파일 업로드 부분
-uploaded_file = st.file_uploader("파일을 업로드하세요", type=['png'])
-
-if uploaded_file is not None:
-    # 파일을 읽고 이미지로 변환
-    image = Image.open(uploaded_file)
-    # 이미지 표시
-    st.image(image, caption='업로드된 이미지', use_column_width=True)
-
-
-
-import streamlit as st
-from PIL import Image
-
-# 타이틀 설정
-st.title('WEBP 파일 뷰어')
-
-# 파일 업로드 부분
-uploaded_file = st.file_uploader("파일을 업로드하세요", type=['webp'])
-
-if uploaded_file is not None:
-    # 파일을 읽고 이미지로 변환
-    image = Image.open(uploaded_file)
-    # 이미지 표시
-    st.image(image, caption='업로드된 이미지', use_column_width=True)
-
-
-
-
 import streamlit as st
 import pandas as pd
 
-# 데이터를 DataFrame으로 변환
+# Image URLs
+image_urls = [
+    "https://file.o-lens.com/prd_img/20670/547bb379-1c08-46f8-b77b-bb7428153d45%ED%93%A8%EC%96%B4%ED%8B%B4_SUM_ch.jpg?w=330",
+    "https://file.o-lens.com/prd_img/20670/dde68f3a-dc5b-4ada-8782-6f8bfe2afbc0%ED%93%A8%EC%96%B4%ED%8B%B4_L_ch.png?w=90",
+    "https://file.o-lens.com/prd_img/20650/672c9c08-e8f3-425a-ba93-bc8275381bdcSUM_%EB%9D%BC%EB%96%BC%EB%B8%8C%EB%9D%BC%EC%9A%B4.jpg?w=330",
+    "https://file.o-lens.com/prd_img/20650/7acdde5c-7224-4695-aa4e-ee805e259efbL_%EB%9D%BC%EB%96%BC%EB%B8%8C%EB%9D%BC%EC%9A%B4.png?w=90",
+    "https://file.o-lens.com/prd_img/20651/7aeb28d8-746b-4008-a6b8-87b8ce3972acSUM_%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%9D%BC%EC%9A%B4.jpg?w=330",
+    "https://file.o-lens.com/prd_img/20651/b464f894-2efa-43c2-8be0-1230eb41cf21L_%EB%AA%A8%EC%B9%B4%EB%B8%8C%EB%9D%BC%EC%9A%B4.png?w=90"
+]
+
+# Product name and diameter data
 data = {
-    "Product Name": ["빅글로이 모카브라운", "빅글로이 헤이즐", "샤인터치 밀키 브라운", "샤인터치 밀키 그레이", "샤인터치 밀키 초코", 
-                    "퓨어틴 브라운", "퓨어틴 초코", "글로이 내츄럴 라떼브라운", "글로이 내츄럴 모카브라운", "더블틴트 그레이"],
-    "Description": ["13.6mm (1Month 권장)", "13.6mm (1Month 권장)", "12.7mm (1Month 권장)", "12.7mm (1Month 권장)", 
-                    "12.7mm (1Month 권장)", "12.8mm (1Month 권장)", "12.8mm (1Month 권장)", "13.0mm (1Month 권장)", 
-                    "13.0mm (1Month 권장)", "12.9mm (1Month 권장)"]
+    "products__product-name": [
+        "Big Gloy Mocha Brown",
+        "Big Gloy Hazel",
+        "Shine Touch Milky Brown",
+        "Shine Touch Milky Gray",
+        "Shine Touch Milky Choco",
+        "Puretin Brown",
+        "Puretin Chocolate",
+        "Gloy Natural Latte Brown",
+        "Gloy Natural Mocha Brown",
+        "Double Tint Gray",
+        "Double Tint Brown",
+        "French Shine Hazel",
+        "French Shine Gray",
+        "Jennifer 3-Con Olive",
+        "Jennifer 3 Con Gray",
+        "Jennifer 3 Con Hazel",
+        "Plum chocolate",
+        "Coming Chocolate",
+        "And Black",
+        "Neil's Gray",
+        "Neil's Brown",
+        "Rowling Gray",
+        "Rowling Brown",
+        "Moodnight Mood Gray",
+        "Moodnight Mood Brown",
+        "Wannabe Camel Brown",
+        "Wannabe Humming Brown",
+        "Bibeering Brown",
+        "Symphony 3-Con Hazel",
+        "Bea-ring Gray",
+        "Symphony 3-con Gray",
+        "Bibi ring chocolate",
+        "It's chocolate",
+        "It's Black",
+        "Symphony 3-Con Green",
+        "Bibi ring pink",
+        "Gloy Brown",
+        "Bibi 3 Con Brown",
+        "Beeping Beige",
+        "Skandi Hazel"
+    ],
+    "products__product-desc": [
+        "13.6 mm (1Month recommended)",
+        "13.6 mm (1Month recommended)",
+        "12.7 mm (1 Month Recommended)",
+        "12.7 mm (1 Month Recommended)",
+        "12.7mm (1Month recommended)",
+        "12.8 mm (1Month recommended)",
+        "12.8mm (1Month recommended)",
+        "13.0 mm (1 Month Recommended)",
+        "13.0 mm (1 Month Recommended)",
+        "12.9 mm (1Month recommended)",
+        "12.9 mm (1Month recommended)",
+        "13.2 mm (1 Month Recommended)",
+        "13.2 mm (1Month recommended)",
+        "13.3 mm (1 Month Recommended)",
+        "13.3 mm (1Month recommended)",
+        "13.3 mm (1 Month Recommended)",
+        "13.2 mm (1 Month recommended)",
+        "13.8 mm (1 Month recommended)",
+        "13.3 mm (1 Month recommended)",
+        "13.5 mm (1 Month Recommended)",
+        "13.5 mm (1 Month Recommended)",
+        "12.5 mm (1 Month Recommended)",
+        "12.5 mm (1 Month Recommended)",
+        "13.3 mm (1 Month recommended)",
+        "13.3 mm (1 Month recommended)",
+        "13.3 mm (1 Month Recommended)",
+        "13.0 mm (1 Month Recommended)",
+        "13.0 mm (1Month recommended)",
+        "13.0 mm (1 Month recommended)",
+        "13.5 mm (1 Month Recommended)",
+        "13.0 mm (1Month recommended)",
+        "13.5 mm (1 Month Recommended)",
+        "13.0mm (1Month recommended)",
+        "12.9mm (1Month recommended)",
+        "13.1 mm (1Month recommended)",
+        "13.5 mm (1 Month Recommended)",
+        "13.0 mm (1Month recommended)",
+        "13.1 mm (1 Month Recommended)",
+        "13.8 mm (1Month recommended)",
+        "13.0 mm (1 Month recommended)",
+        "11.9 mm (1 Month Recommended)"
+    ]
 }
 
+# Create a DataFrame
 df = pd.DataFrame(data)
-print(df)
 
-import streamlit as st
+# Display the DataFrame
+st.dataframe(df)
 
-# 이미지 URL
-image_url = "https://image.bmit.co.kr/lens-me.com/upload/goods/2023072109381759212/2023072109381759212_0_400.jpg"
 
-# 이미지 표시
-st.image(image_url, use_container_width=True)
 
 
 
