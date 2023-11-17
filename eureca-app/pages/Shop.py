@@ -72,6 +72,9 @@ data = {
 
 df = pd.DataFrame(data)
 
+streamlit run app.py
+
+
 # 스트림릿 타이틀 설정
 st.title('제품 목록')
 
