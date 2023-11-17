@@ -94,6 +94,35 @@ df = pd.DataFrame(data)
 print(df)
 
 
+
+pip install streamlit
+pip install Pillow
+
+import streamlit as st
+from PIL import Image
+
+# 웹 페이지의 제목
+st.title('WEBP 이미지 표시')
+
+# WEBP 이미지의 경로
+image_path = 'path_to_your_image.webp'  # 여기서는 원하는 WEBP 이미지 경로로 바꿔주세요
+
+# 이미지를 열고 표시
+image = Image.open(image_path)
+st.image(image, caption='WEBP 이미지', use_column_width=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 스트림릿 타이틀 설정
 st.title('제품 목록')
 
