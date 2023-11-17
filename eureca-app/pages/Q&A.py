@@ -57,6 +57,23 @@ st.markdown("<h1 style='text-align: center;'>❄️❄️❄️</h1>", unsafe_al
 st.write(" ")
 st.write(" ")
 
+
+with st.expander("Q. 실시간 문의가 가능한가요?"):
+    st.markdown("""
+    <p style="margin: 5px 0; line-height: 1;">
+        렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.<br>
+        월~금 11:00~17:00<br>
+        점심시간 : 12:00~13:00<br>
+        * 주말 및 공휴일 제외<br>
+        * 업무시간 외에 전송된 메세지는 전달되지 않습니다.
+    </p>
+    """, unsafe_allow_html=True)
+
+
+
+
+
+
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
