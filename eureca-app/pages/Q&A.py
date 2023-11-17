@@ -33,33 +33,33 @@ with st.expander("Q. 무통장 입금 기한이 궁금합니다."):
     """, unsafe_allow_html=True)
 with st.expander("Q. 무통장 입금 확인이 되지 않습니다."):
     st.markdown("""
-    <p style="margin: 5px 0; line-hei
+    <p style="margin: 5px 0; line-hei: 1.5;">
      입금자명과 주문자명이 일치하지 않을 경우 자동 입금 확인이 되지 않습니다.무통장 입금 기한은 주문 후 24시간입니다.<br>
      이 경우 1:1 QnA 게시판 혹은 카카오톡 채널을 통해 문의 부탁드립니다.
     </p>
     """, unsafe_allow_html=True)
 with st.expander("Q. 결제수단을 변경하고 싶습니다."):
     st.markdown("""
-    <p style="margin: 5px 0; line-hei
+    <p style="margin: 5px 0; line-hei: 1.5;">
      결제수단 변경은 저희 측에서 처리해드리기 어렵습니다.<br>
      결제수단 변경을 원하시는 경우 기존 주문서를 취소하고 새로운 주문서를 작성해주셔야 합니다.
     </p>
     """, unsafe_allow_html=True)
 with st.expander("Q. 적립금 사용 최소 금액 및 기한이 궁금합니다."):
     st.markdown("""
-    <p style="margin: 5px 0; line-hei
+    <p style="margin: 5px 0; line-hei: 1.5;">
      지급된 적립금은 최소 금액 및 사용 기한에 관계없이 자유롭게 사용이 가능합니다.
     </p>
     """, unsafe_allow_html=True)
 with st.expander("Q. AI Personal 추천이 정확한가요?"):
     st.markdown("""
-    <p style="margin: 5px 0; line-hei
+    <p style="margin: 5px 0; line-hei: 1.5;">
      이 칸은 기본적으로 접혀있습니다.
     </p>
     """, unsafe_allow_html=True)
 with st.expander("Q. 오프라인 쇼룸이 있나요?"):
     st.markdown("""
-    <p style="margin: 5px 0; line-hei
+    <p style="margin: 5px 0; line-hei: 1.5;">
      렌즈 인 그레이는 아직 오프라인 쇼룸을 운영하지 않고 있습니다.<br>
      오프라인에도 제품들을 만나보실 수 있도록 부지런히 노력하도록 하겠습니다.
     </p>
