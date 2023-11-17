@@ -110,13 +110,6 @@ print(df)
 
 
 
-import streamlit as st
-
-# 이미지 URL
-image_url = "https://file.o-lens.com/prd_img/20672/a57f28ad-0b7a-494d-b7ba-e60ea9b5fb4b%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_br_L.png?w=90"
-
-# 이미지 표시
-st.image(image_url, use_container_width=True)
 
 
 
