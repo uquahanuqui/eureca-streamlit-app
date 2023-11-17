@@ -16,6 +16,15 @@ if category == "Lens-me":
     st.write("Lens-me")
     st.link_button("Lens-me", "https://www.lens-me.com/shop/")
 
+import streamlit as st
+
+# 이미지 URL
+image_url = "https://image.bmit.co.kr/lens-me.com/upload/goods/2023072109381759212/2023072109381759212_0_400.jpg"
+
+# 이미지 표시
+st.image(image_url, use_container_width=True)
+
+
 
 elif category == "O-lens":
     st.write("O-lens")
