@@ -58,6 +58,28 @@ if uploaded_file is not None:
     # 이미지 표시
     st.image(image, caption='업로드된 이미지', use_column_width=True)
 
+
+
+import streamlit as st
+from PIL import Image
+
+# 타이틀 설정
+st.title('WEBP 파일 뷰어')
+
+# 이미지 파일 경로
+image_path = 'your_image.webp'  # 여기서 'your_image.webp'를 로컬의 WEBP 파일 경로로 대체하세요.
+
+# 이미지 파일 열기
+image = Image.open(image_path)
+
+# 이미지 표시
+st.image(image, caption='로컬에서 불러온 WEBP 이미지', use_column_width=True)
+
+
+
+
+
+
 import streamlit as st
 import pandas as pd
 
