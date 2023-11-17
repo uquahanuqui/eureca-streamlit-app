@@ -37,6 +37,7 @@ st.markdown("---")
 search_query = st.text_input("Search :mag:")
 
 #프로필
+st.divider()
 # 전체 배경색을 흰색으로 설정
 st.write("""
 <style>
