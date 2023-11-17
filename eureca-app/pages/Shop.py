@@ -66,16 +66,14 @@ from PIL import Image
 # 타이틀 설정
 st.title('WEBP 파일 뷰어')
 
-# 이미지 파일 경로
-image_path = 'your_image.webp'  # 여기서 'your_image.webp'를 로컬의 WEBP 파일 경로로 대체하세요.
+# 파일 업로드 부분
+uploaded_file = st.file_uploader("파일을 업로드하세요", type=['webp'])
 
-# 이미지 파일 열기
-image = Image.open(image_path)
-
-# 이미지 표시
-st.image(image, caption='로컬에서 불러온 WEBP 이미지', use_column_width=True)
-
-
+if uploaded_file is not None:
+    # 파일을 읽고 이미지로 변환
+    image = Image.open(uploaded_file)
+    # 이미지 표시
+    st.image(image, caption='업로드된 이미지', use_column_width=True)
 
 
 
