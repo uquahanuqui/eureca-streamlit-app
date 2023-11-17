@@ -67,6 +67,7 @@ st.write(" ")
 st.write(" ")
 
 #프로필
+st.markdown("---")
 # 전체 배경색을 흰색으로 설정
 st.write("""
 <style>
