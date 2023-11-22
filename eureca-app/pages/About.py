@@ -109,7 +109,7 @@ st.markdown("""
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
-    <a href='http://pf.kakao.com/_HBxnbG' 
+    <a href='http://pf.kakao.com/_xblxexjG' 
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
 """, unsafe_allow_html=True)
