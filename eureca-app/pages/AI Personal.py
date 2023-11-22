@@ -7,8 +7,8 @@ st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_htm
 st.divider()
 
 #링크 버튼
-st.link_button("카카오 채널", "http://pf.kakao.com/_HBxnbG")
-st.link_button("채팅 바로가기", "http://pf.kakao.com/_HBxnbG/chat")
+st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
+st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
 
 #프로필
 st.markdown("---")
@@ -53,7 +53,7 @@ st.markdown("""
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
     <span>&nbsp;</span>  <!-- 공백 추가 -->
-    <a href='http://pf.kakao.com/_HBxnbG' 
+    <a href='http://pf.kakao.com/_xblxexjG' 
        class='btn-link'>KAKAO CHANNEL</a>
 </div>
 """, unsafe_allow_html=True)
