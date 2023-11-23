@@ -315,6 +315,54 @@ if __name__ == '__main__':
 
 
 
+def create_streamlit_app():
+    # Title for the Streamlit app
+    st.title("Idol-lens Product Table")
+
+    # Data for the table
+    data = [
+   ("YURIAL MAX - EARL GRAY 예약수령", "26,000원", "BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%", " 사용기간 : 1개월"),
+("YURIAL MAX - WATER BROWN 예약수령", "26,000원", "BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%", " 사용기간 : 1개월"),
+("EURORING - WATERY GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", " 6~12months"),
+("EURORING - MINERAL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", " 6~12months"),
+("EURORING - MEL BEIGE 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", " 6~12months"),
+("유리알 원데이 얼그레이 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("유리알 원데이 맑은브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("칸나로제 원데이 베이지브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("칸나로제 원데이 누드브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("2세트 할인 이벤트(12개월)", "48,000원", "", ""),
+("YURIAL 1DAY - EARL GRAY 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("YURIAL 1DAY - WATER BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("YURIAL - MUL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", " 6~12months"),
+("YURIAL - SERUM BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", " 6~12months"),
+("YURIAL - ROYAL BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", " 6~12months"),
+("YURIAL - WATER BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", " 6~12months"),
+("YURIAL - EARL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", " 6~12months"),
+("CANNA ROZE 1DAY - NUDE BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("CANNA ROZE 1DAY - BEIGE BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""),
+("PRO1.5 - CARAMEL BROWN 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", " 6~12months"),
+("PRO1.5 - CHARCOAL GRAY 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", " 6~12months"),
+("PRO1.5 - PEACH BROWN 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", " 6~12months"),
+("ROZE AIRY - BLUE BLACK 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", " 권장 사용:1개월"),
+("ROZE AIRY - BABY BROWN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", " 권장 사용:1개월"),
+("ROZE AIRY - OLIVE GREEN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", " 권장 사용:1개월")
+]
+
+
+
+    # Creating a DataFrame from the data
+    df = pd.DataFrame(data, columns=["Product Name", "Product Price","Lens Size", "Use period" ])
+
+    # Displaying the DataFrame in the Streamlit app
+    st.write(df)
+
+# This line is necessary to run the app
+if __name__ == '__main__':
+    create_streamlit_app()
+
+
+
+
 
 
 
