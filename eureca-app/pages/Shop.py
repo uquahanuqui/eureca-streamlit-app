@@ -2,46 +2,6 @@
 import streamlit as st
 import pandas as pd
 
-
-
-#이미지 첨부
-st.write(" ")
-img_url = "https://file.o-lens.com/prd_img/20673/36d832ac-8068-4e83-8ac9-7d1e79fa9bc8%EC%83%A4%EC%9D%B8%ED%84%B0%EC%B9%98_ch_L.png"
-
-
-# 이미지를 스타일링하여 중앙에 표시
-st.markdown(
-    f'<div style="{centered_image_style}">'
-    f'<img src="{img_url}" alt="Image" style="max-width: 100%; max-height: 100%;">'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
