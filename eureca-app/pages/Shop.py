@@ -7,6 +7,39 @@ st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
 #구분선
 st.divider()
 
+import streamlit as st
+import pandas as pd
+
+def create_streamlit_app():
+    # Title for the Streamlit app
+    st.title("Product Table")
+
+    # Data for the table
+    data = [
+        ("유스 원데이 블랙", "13.0mm", "18,000"),
+        ("유스 원데이 쵸코", "13.0mm", "18,000"),
+        ("메이크오버 원데이 위키 브라운(4P)", "13.8mm", "9,000")
+    ]
+
+    # Creating a DataFrame from the data
+    df = pd.DataFrame(data, columns=["Product Name", "Lens Size", "Product Price"])
+
+    # Displaying the DataFrame in the Streamlit app
+    st.write(df)
+
+# This line is necessary to run the app
+if __name__ == '__main__':
+    create_streamlit_app()
+
+
+
+
+
+
+
+
+
+
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
