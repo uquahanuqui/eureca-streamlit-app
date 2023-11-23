@@ -2,6 +2,18 @@
 import streamlit as st
 import pandas as pd
 
+#타이틀 & 이모티콘
+st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
+
+#안내
+st.markdown("---", unsafe_allow_html=True)
+st.markdown("<p style='margin: 0px;'>Call 82+10 4536 6713 (11:00 ~ 17:00 / 13:00 ~ 14:00 점심시간)</p>", unsafe_allow_html=True)
+st.markdown("<p style='margin: 0px;'>Email hyb0320@kookmin.ac.kr</p>", unsafe_allow_html=True)
+st.markdown("<p style='margin: 0px;'>Kakaotalk 11:00 ~ 17:00 (13:00 ~ 14:00 점심시간)</p>", unsafe_allow_html=True)
+
+#구분선
+st.divider()
+
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
