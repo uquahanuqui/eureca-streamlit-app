@@ -6,9 +6,6 @@ st.markdown("<h1 style='text-align: center;'>☃️Lens in Gray☃️</h1>", uns
 #구분선
 st.divider()
 
-#일반 글씨
-st.write("Team 6 : uquahanuqui :christmas_tree:")
-
 #메인 이미지
 import streamlit as st
 
