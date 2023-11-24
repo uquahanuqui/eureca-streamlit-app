@@ -14,7 +14,7 @@ import streamlit as st
 
 image_paths = ["https://i.pinimg.com/originals/f5/9e/70/f59e707642b869bae3d59d9b18f0b3bc.png", "https://i.pinimg.com/originals/77/0a/7d/770a7dad3851a2d930989254770c214f.png", "https://i.pinimg.com/originals/2d/f8/76/2df8760dfe7e287774f3b804ae73a0bd.png"]
 
-image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
+image_index = st.slider(' ', 0, len(image_paths) - 1)
 
 st.image(image_paths[image_index], use_column_width=True)
 
