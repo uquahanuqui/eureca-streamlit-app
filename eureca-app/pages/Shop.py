@@ -201,6 +201,12 @@ def create_streamlit_app():
     
     elif category == "O-lens":
         st.header("O-lens Product")
+        
+        
+        https://o-lens.com/product/20662
+
+        
+        
         # Data and DataFrame for O-lens
         o_lens_data = [
             ( "워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
