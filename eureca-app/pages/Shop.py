@@ -13,7 +13,7 @@ def create_streamlit_app():
     category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
 
     #이미지 첨부
-    img_urls = {
+    img_url = {
         "Lens-me": "https://i.ytimg.com/vi/aRrlD-9WIbk/maxresdefault.jpg",
         "O-lens": "https://o-lens.com/images/share_image.png",
         "Idol-lens": "https://www.lensgogo.biz/wp-content/uploads/2021/08/%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B0%B0%EB%84%88.jpg",
