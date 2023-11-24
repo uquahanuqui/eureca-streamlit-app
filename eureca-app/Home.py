@@ -9,25 +9,14 @@ st.divider()
 #일반 글씨
 st.write("Team 6 : uquahanuqui :christmas_tree:")
 
-#이미지 첨부
-st.write(" ")
-img_url = "https://cdn.ggilbo.com/news/photo/202208/927566_759614_5933.png"
+#메인 이미지
+import streamlit as st
 
-# 이미지를 중앙에 위치시키기 위한 CSS 스타일
-centered_image_style = """
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px; /* 이미지 높이 조절 */
-"""
+image_paths = ["https://i.pinimg.com/originals/f5/9e/70/f59e707642b869bae3d59d9b18f0b3bc.png", "https://i.pinimg.com/originals/77/0a/7d/770a7dad3851a2d930989254770c214f.png", "https://i.pinimg.com/originals/2d/f8/76/2df8760dfe7e287774f3b804ae73a0bd.png"]
 
-# 이미지를 스타일링하여 중앙에 표시
-st.markdown(
-    f'<div style="{centered_image_style}">'
-    f'<img src="{img_url}" alt="Image" style="max-width: 100%; max-height: 100%;">'
-    '</div>',
-    unsafe_allow_html=True
-)
+image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
+
+st.image(image_paths[image_index], use_column_width=True)
 
 #눈내림
 st.snow()
@@ -35,18 +24,6 @@ st.snow()
 #검색창
 st.markdown("---")
 search_query = st.text_input("Search :mag:")
-
-#
-import streamlit as st
-
-# 이미지 파일 경로를 리스트로 저장
-image_paths = ["https://i.pinimg.com/originals/f5/9e/70/f59e707642b869bae3d59d9b18f0b3bc.png", "https://i.pinimg.com/originals/77/0a/7d/770a7dad3851a2d930989254770c214f.png", "https://i.pinimg.com/originals/e1/8d/73/e18d730bb8b9e91dcec06eb12281e2ea.png"]
-
-# 슬라이더를 사용해 이미지 선택
-image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
-
-# 선택된 이미지 표시
-st.image(image_paths[image_index], use_column_width=True)
 
 #프로필
 st.markdown("---")
