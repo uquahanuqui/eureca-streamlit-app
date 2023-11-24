@@ -201,29 +201,7 @@ def create_streamlit_app():
     
     elif category == "O-lens":
         st.header("O-lens Product")
-        
-        #이미지 첨부
-st.write(" ")
-img_url = "https://o-lens.com/images/common/h1-olens.png"
-
-# 이미지를 중앙에 위치시키기 위한 CSS 스타일
-centered_image_style = """
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px; /* 이미지 높이 조절 */
-"""
-
-# 이미지를 스타일링하여 중앙에 표시
-st.markdown(
-    f'<div style="{centered_image_style}">'
-    f'<img src="{img_url}" alt="Image" style="max-width: 100%; max-height: 100%;">'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-        
-        
+         
         # Data and DataFrame for O-lens
         O_lens_data = [
 ( "워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
