@@ -17,7 +17,7 @@ def create_streamlit_app():
         st.header("Lens-me Product")
         # Data and DataFrame for Lens-me
         lens_me_data = [
-            ("유스 원데이 블랙", "13.0mm", "18,000"),
+    ("유스 원데이 블랙", "13.0mm", "18,000"),
     ("유스 원데이 쵸코", "13.0mm", "18,000"),
     ("유스 원데이 그레이", "13.0mm", "18,000"),
     ("오리지널 원데이 시리즈 베이블리 그레이(10P)", "13.4mm", "18,000"),
