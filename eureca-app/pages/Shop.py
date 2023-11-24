@@ -7,25 +7,48 @@ st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
 #구분선
 st.divider()
 
-#메뉴
-category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
+#데이터 삽입
+def create_streamlit_app():
+    st.title("Contact Lens Product Table")
 
-# 각 카테고리에 대한 페이지를 표시
-if category == "Lens-me":
-    st.write("Lens-me")
-    st.link_button("Lens-me", "https://www.lens-me.com/shop/")
+    # Sidebar for category selection
+    category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
 
-elif category == "O-lens":
-    st.write("O-lens")
-    st.link_button("O-lens", "https://o-lens.com/")
+    # Data for each category
+    lens_me_data = [
+        # Your Lens-me data here...
+    ]
 
-elif category == "Idol-lens":
-    st.write("Idol-lens")
-    st.link_button("Idol-lens", "https://www.i-dol.kr/")
+    o_lens_data = [
+        # Your O-lens data here...
+    ]
 
-elif category == "HapaKristin":
-    st.write("HapaKristin")
-    st.link_button("HapaKristin", "https://hapakristin.co.kr/")
+    idol_lens_data = [
+        # Your Idol-lens data here...
+    ]
+
+    hapa_kristin_data = [
+        # Your HapaKristin data here...
+    ]
+
+    # Creating DataFrames from the data
+    if category == "Lens-me":
+        df = pd.DataFrame(lens_me_data, columns=["Product Name", "Lens Size", "Product Price"])
+        st.write(df)
+    elif category == "O-lens":
+        df = pd.DataFrame(o_lens_data, columns=["Product Name", "Product composition", "Product Price", "Lens Size"])
+        st.write(df)
+    elif category == "Idol-lens":
+        df = pd.DataFrame(idol_lens_data, columns=["Product Name", "Use period", "Lens Size", "Product Price"])
+        st.write(df)
+    elif category == "HapaKristin":
+        df = pd.DataFrame(hapa_kristin_data, columns=["Product Name", "Use period", "Lens Size", "Product Price"])
+        st.write(df)
+
+if __name__ == '__main__':
+    create_streamlit_app()
+    
+ ###########
 
 
 def create_streamlit_app():
