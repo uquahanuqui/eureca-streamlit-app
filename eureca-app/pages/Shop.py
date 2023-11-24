@@ -200,7 +200,7 @@ def create_streamlit_app():
         df = pd.DataFrame(lens_me_data, columns=["Product Name", "Lens Size", "Product Price"])
     
     elif category == "O-lens":
-        st.title("O-lens Product")
+        st.header("O-lens Product")
         # Data and DataFrame for O-lens
         o_lens_data = [
             ( "워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
@@ -289,7 +289,7 @@ def create_streamlit_app():
         df = pd.DataFrame(o_lens_data, columns=["Product Name", "Product composition", "Product Price", "Lens Size"])
 
     elif category == "Idol-lens":
-        st.title("Idol-lens Product")
+        st.header("Idol-lens Product")
         # Data and DataFrame for Idol-lens
         idol_lens_data = [
             ("YURIAL MAX - EARL GRAY 예약수령", "26,000원", "BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%", " 사용기간 : 1개월"),
@@ -321,7 +321,7 @@ def create_streamlit_app():
         df = pd.DataFrame(idol_lens_data, columns=["Product Name", "Use period", "Lens Size", "Product Price"])
 
     elif category == "HapaKristin":
-        st.title("HapaKristin Product")
+        st.header("HapaKristin Product")
         # Data and DataFrame for HapaKristin
         hapa_kristin_data = [
             ("쇼퍼홀릭 크리스틴 - 미드나잇 그레이", "한달용", "13mm(14.2mm)", ""),
