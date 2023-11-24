@@ -13,7 +13,7 @@ def create_streamlit_app():
     category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
 
     #이미지 첨부
-    img_url = "https://i.pinimg.com/originals/a9/09/27/a9092792aa751e2d55d016693d9b5edd.jpg"
+    img_url = "https://image.bmit.co.kr/lens-me.com/upload/banner/20230922162022_70482891.jpg"
 
     # 이미지를 중앙에 위치시키기 위한 CSS 스타일
     centered_image_style = """
