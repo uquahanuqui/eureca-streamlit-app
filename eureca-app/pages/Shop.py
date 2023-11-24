@@ -318,7 +318,7 @@ def create_streamlit_app():
 ("ROZE AIRY - BABY BROWN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", " 권장 사용:1개월"),
 ("ROZE AIRY - OLIVE GREEN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", " 권장 사용:1개월")
         ]
-        df = pd.DataFrame(idol_lens_data, columns=["Product Name", "Use period", "Lens Size", "Product Price"])
+        df = pd.DataFrame(idol_lens_data, columns=["Product Name", "Product Price", "Lens Size", "Use period"])
 
     elif category == "HapaKristin":
         st.header("HapaKristin Product")
