@@ -30,7 +30,7 @@ elif category == "HapaKristin":
 
 def create_streamlit_app():
     # Title for the Streamlit app
-    st.title("Lens-me Product Table")
+    st.title("Lens-me Product")
 
     # Data for the table
     data = [
@@ -230,7 +230,7 @@ if __name__ == '__main__':
 
 def create_streamlit_app():
     # Title for the Streamlit app
-    st.title("O-lens Product Table")
+    st.title("O-lens Product")
 
     # Data for the table
     data = [
@@ -335,7 +335,7 @@ if __name__ == '__main__':
 
 def create_streamlit_app():
     # Title for the Streamlit app
-    st.title("Idol-lens Product Table")
+    st.title("Idol-lens Product")
 
     # Data for the table
     data = [
@@ -384,7 +384,7 @@ if __name__ == '__main__':
 
 def create_streamlit_app():
     # Title for the Streamlit app
-    st.title("Hapakcristin Product Table")
+    st.title("HapaKristin Product")
 
     # Data for the table
     data = [
