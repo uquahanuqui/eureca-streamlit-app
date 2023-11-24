@@ -15,9 +15,6 @@ def create_streamlit_app():
     #이미지 삽입
     image_urls = {
         "Lens-me": "https://image.bmit.co.kr/lens-me.com/upload/banner/20230922162022_70482891.jpg",
-        "O-lens": "https://example.com/o_lens_image.jpg",
-        "Idol-lens": "https://example.com/idol_lens_image.jpg",
-        "HapaKristin": "https://example.com/hapa_kristin_image.jpg"
     }
 
     # Setting the title based on the selected category
