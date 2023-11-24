@@ -40,7 +40,7 @@ search_query = st.text_input("Search :mag:")
 import streamlit as st
 
 # 이미지 파일 경로를 리스트로 저장
-image_paths = ["/path/to/images/image1.png", "/path/to/images/image2.png", "/path/to/images/image3.png"]
+image_paths = ["https://i.pinimg.com/originals/f5/9e/70/f59e707642b869bae3d59d9b18f0b3bc.png", "https://i.pinimg.com/originals/77/0a/7d/770a7dad3851a2d930989254770c214f.png", "https://i.pinimg.com/originals/e1/8d/73/e18d730bb8b9e91dcec06eb12281e2ea.png"]
 
 # 슬라이더를 사용해 이미지 선택
 image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
