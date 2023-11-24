@@ -7,7 +7,6 @@ st.markdown("<h1 style='text-align: center;'>☃️Lens in Gray☃️</h1>", uns
 st.divider()
 
 #검색창
-st.markdown("---")
 search_query = st.text_input("Search :mag:")
 
 #메인 이미지
