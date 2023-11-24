@@ -14,7 +14,7 @@ def create_streamlit_app():
 
     # Setting the title based on the selected category
     if category == "Lens-me":
-        st.title("Lens-me Product")
+        st.header("Lens-me Product")
         # Data and DataFrame for Lens-me
         lens_me_data = [
             ("유스 원데이 블랙", "13.0mm", "18,000"),
