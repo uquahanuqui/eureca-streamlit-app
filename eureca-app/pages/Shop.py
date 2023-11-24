@@ -222,7 +222,7 @@ def create_streamlit_app():
     elif category == "O-lens":
         st.header("O-lens Product")
         # Data and DataFrame for O-lens
-        O-lens_data = [
+        O_lens_data = [
 ("워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
 ("샤인터치 밀키브라운","(20P)","34,000","12.7mm (1Day 권장)"),
 ("샤인터치 밀키그레이","(20P)","34,000","12.7mm (1Day 권장)"),
@@ -306,7 +306,7 @@ def create_streamlit_app():
 ("프렌치샤인 원데이 그레이(10P)","(10P)","18,000","13.2mm (1Day 권장)"),
 ("미스티 로맨틱초코","(20P)","34,000","13.2mm (1Day 권장)")
         ]
-        df = pd.DataFrame(o_lens_data, columns=["Product Name", "Product composition", "Product Price", "Lens Size"])
+        df = pd.DataFrame(O_lens_data, columns=["Product Name", "Product composition", "Product Price", "Lens Size"])
 
     elif category == "Idol-lens":
         st.header("Idol-lens Product")
