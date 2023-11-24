@@ -36,6 +36,12 @@ st.snow()
 st.markdown("---")
 search_query = st.text_input("Search :mag:")
 
+#
+pip install streamlit
+
+
+
+
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
