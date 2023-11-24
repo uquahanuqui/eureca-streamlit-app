@@ -11,7 +11,7 @@ st.markdown("<p style='font-size: 22px; font-weight: bold;'>회원가입 안내<
 st.write(" ")
 
 #회원가입 사진
-img_url = "https://i.pinimg.com/736x/6c/f2/b1/6cf2b15eb533a2c9f1620fb2d5dd756e.jpg"
+img_url = "https://pbs.twimg.com/media/F_shmYmbgAAa4ft?format=jpg&name=large"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
