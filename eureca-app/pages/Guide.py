@@ -18,7 +18,7 @@ centered_image_style = """
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* 이미지 높이 조절 */
+    height: 400px; /* 이미지 높이 조절 */
 """
 
 # 이미지를 스타일링하여 중앙에 표시
