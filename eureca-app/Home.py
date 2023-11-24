@@ -48,6 +48,7 @@ image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
 # 선택된 이미지 표시
 st.image(image_paths[image_index], use_column_width=True)
 
+streamlit run "48af7da4d44ae9a35cfa7d3117159c09.png", "770a7dad3851a2d930989254770c214f.png", "e18d730bb8b9e91dcec06eb12281e2ea.png"
 
 #프로필
 st.markdown("---")
