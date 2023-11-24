@@ -9,9 +9,27 @@ st.divider()
 #내용
 st.markdown("<p style='font-size: 22px; font-weight: bold;'>회원가입 안내</p>", unsafe_allow_html=True)
 st.write(" ")
+
 #회원가입 사진
 img_url = "https://i.pinimg.com/736x/6c/f2/b1/6cf2b15eb533a2c9f1620fb2d5dd756e.jpg"
 
+# 이미지를 중앙에 위치시키기 위한 CSS 스타일
+centered_image_style = """
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* 이미지 높이 조절 */
+"""
+
+# 이미지를 스타일링하여 중앙에 표시
+st.markdown(
+    f'<div style="{centered_image_style}">'
+    f'<img src="{img_url}" alt="Image" style="max-width: 100%; max-height: 100%;">'
+    '</div>',
+    unsafe_allow_html=True
+)
+
+#내용
 st.write(" ")
 st.write("학생증 디자인의 회원가입 페이지를 통해 Lens in Gray의 일원이 되어 다양한 회원 혜택을 경험해 보세요.")
 st.write(" ")
