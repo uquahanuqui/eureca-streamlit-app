@@ -477,7 +477,7 @@ def create_streamlit_app():
 
 
     # Creating a DataFrame from the data
-    df = pd.DataFrame(data, columns=["Product Name", "Product Price","Lens Size", "Use period" ])
+    df = pd.DataFrame(data, columns=["Product Name" , "Use period" ,"Lens Size", "Product Price" ])
 
     # Displaying the DataFrame in the Streamlit app
     st.write(df)
