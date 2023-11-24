@@ -303,7 +303,7 @@ def create_streamlit_app():
 
 
     # Creating a DataFrame from the data
-    df = pd.DataFrame(data, columns=["Product Name", "Product composition", "Lens Size", "Product Price"])
+    df = pd.DataFrame(data, columns=["Product Name", "Product composition" , "Product Price", "Lens Size"])
 
     # Displaying the DataFrame in the Streamlit app
     st.write(df)
