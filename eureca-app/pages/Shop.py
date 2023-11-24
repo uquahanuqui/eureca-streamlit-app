@@ -204,7 +204,7 @@ def create_streamlit_app():
         
         #이미지 첨부
 st.write(" ")
-img_url = "https://file.o-lens.com/main-display/f0e929bf-07ad-4d85-a21d-27bfa2caa7943cbad795-8888-4143-9d1e-83b09121a24e.jpeg"
+img_url = "https://o-lens.com/images/common/h1-olens.png"
 
 # 이미지를 중앙에 위치시키기 위한 CSS 스타일
 centered_image_style = """
