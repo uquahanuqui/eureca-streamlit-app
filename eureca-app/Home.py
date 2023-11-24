@@ -12,7 +12,7 @@ search_query = st.text_input("Search :mag:")
 #메인 이미지
 import streamlit as st
 
-image_paths = ["blob:https://twitter.com/66fbd5bc-1034-4681-bd12-5eb0ca2a5c4c", "https://pbs.twimg.com/media/F_sewXfa4AA8J3_?format=jpg&name=4096x4096", "https://pbs.twimg.com/media/F_sexhlbMAAZgvC?format=jpg&name=4096x4096"]
+image_paths = ["https://i.pinimg.com/736x/8c/8c/14/8c8c1472505221ac33b23fd96428c937.jpg", "https://pbs.twimg.com/media/F_sewXfa4AA8J3_?format=jpg&name=4096x4096", "https://pbs.twimg.com/media/F_sexhlbMAAZgvC?format=jpg&name=4096x4096"]
 
 image_index = st.slider(' ', 0, len(image_paths) - 1)
 
