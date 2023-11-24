@@ -13,7 +13,12 @@ def create_streamlit_app():
     category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
 
     #이미지 첨부
-    img_url = "https://image.bmit.co.kr/lens-me.com/upload/banner/20230922162022_70482891.jpg"
+    img_urls = {
+        "Lens-me": "https://i.ytimg.com/vi/aRrlD-9WIbk/maxresdefault.jpg",
+        "O-lens": "https://o-lens.com/images/share_image.png",
+        "Idol-lens": "https://www.lensgogo.biz/wp-content/uploads/2021/08/%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B0%B0%EB%84%88.jpg",
+        "HapaKristin": "https://cdn.winc.app/uploads/ppb/file/file/7926/KR_2023%EB%B8%94%ED%94%84_pcbn-44a881.jpg"
+    }
 
     # 이미지를 중앙에 위치시키기 위한 CSS 스타일
     centered_image_style = """
