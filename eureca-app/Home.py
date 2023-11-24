@@ -39,6 +39,11 @@ search_query = st.text_input("Search :mag:")
 #
 pip install streamlit
 
+mport streamlit as st
+
+# 이미지 파일 경로를 리스트로 저장
+image_paths = ["48af7da4d44ae9a35cfa7d3117159c09.png", "770a7dad3851a2d930989254770c214f.png", "e18d730bb8b9e91dcec06eb12281e2ea.png"]
+
 
 
 
