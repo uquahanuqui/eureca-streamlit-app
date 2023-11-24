@@ -10,6 +10,8 @@ st.divider()
 st.markdown("<p style='font-size: 22px; font-weight: bold;'>회원가입 안내</p>", unsafe_allow_html=True)
 st.write(" ")
 #회원가입 사진
+img_url = "https://i.pinimg.com/736x/6c/f2/b1/6cf2b15eb533a2c9f1620fb2d5dd756e.jpg"
+
 st.write("학생증 디자인의 회원가입 페이지를 통해 Lens in Gray의 일원이 되어 다양한 회원 혜택을 경험해 보세요.")
 st.write(" ")
 st.write(" ")
