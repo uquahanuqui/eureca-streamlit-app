@@ -6,6 +6,10 @@ st.markdown("<h1 style='text-align: center;'>☃️Lens in Gray☃️</h1>", uns
 #구분선
 st.divider()
 
+#검색창
+st.markdown("---")
+search_query = st.text_input("Search :mag:")
+
 #메인 이미지
 import streamlit as st
 
@@ -17,10 +21,6 @@ st.image(image_paths[image_index], use_column_width=True)
 
 #눈내림
 st.snow()
-
-#검색창
-st.markdown("---")
-search_query = st.text_input("Search :mag:")
 
 #프로필
 st.markdown("---")
