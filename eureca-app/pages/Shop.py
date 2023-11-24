@@ -15,7 +15,7 @@ def create_streamlit_app():
     #이미지 첨부
     img_url = {
         "Lens-me": "https://i.ytimg.com/vi/aRrlD-9WIbk/maxresdefault.jpg",
-        "O-lens": "https://o-lens.com/images/share_image.png",
+        "O-lens": "https://i.pinimg.com/736x/94/fd/da/94fdda90da9d616ae4e70dca6e34e220.jpg",
         "Idol-lens": "https://www.idollens.kr/data/banner/18",
         "HapaKristin": "https://cdn.winc.app/uploads/ppb/file/file/7926/KR_2023%EB%B8%94%ED%94%84_pcbn-44a881.jpg"
     }
