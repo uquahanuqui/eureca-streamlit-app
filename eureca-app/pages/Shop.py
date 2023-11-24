@@ -7,8 +7,26 @@ st.markdown("<h1 style='text-align: center;'>Shop</h1>", unsafe_allow_html=True)
 #구분선
 st.divider()
 
-import streamlit as st
-import pandas as pd
+#메뉴
+category = st.sidebar.selectbox("Shop", ["Lens-me", "O-lens", "Idol-lens", "HapaKristin"])
+
+# 각 카테고리에 대한 페이지를 표시
+if category == "Lens-me":
+    st.write("Lens-me")
+    st.link_button("Lens-me", "https://www.lens-me.com/shop/")
+
+elif category == "O-lens":
+    st.write("O-lens")
+    st.link_button("O-lens", "https://o-lens.com/")
+
+elif category == "Idol-lens":
+    st.write("Idol-lens")
+    st.link_button("Idol-lens", "https://www.i-dol.kr/")
+
+elif category == "HapaKristin":
+    st.write("HapaKristin")
+    st.link_button("HapaKristin", "https://hapakristin.co.kr/")
+
 
 def create_streamlit_app():
     # Title for the Streamlit app
