@@ -201,10 +201,9 @@ def create_streamlit_app():
     
     elif category == "O-lens":
         st.header("O-lens Product")
-         
         # Data and DataFrame for O-lens
         O_lens_data = [
-( "워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
+("워터파인","(40P)","40,000","14.0mm (1Day 권장)"),
 ("샤인터치 밀키브라운","(20P)","34,000","12.7mm (1Day 권장)"),
 ("샤인터치 밀키그레이","(20P)","34,000","12.7mm (1Day 권장)"),
 ("샤인터치 밀키초코","(20P)","34,000","12.7mm (1Day 권장)"),
