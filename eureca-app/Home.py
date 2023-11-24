@@ -14,7 +14,7 @@ import streamlit as st
 
 image_paths = ["https://pbs.twimg.com/media/F_sgyCDboAAQB5R?format=jpg&name=4096x4096", "https://pbs.twimg.com/media/F_sewXfa4AA8J3_?format=jpg&name=4096x4096", "https://pbs.twimg.com/media/F_sexhlbMAAZgvC?format=jpg&name=4096x4096"]
 
-image_index = st.slider(' ', 0, len(image_paths) - 1)
+image_index = st.slider(' ', ❄️, len(image_paths) - 1)
 
 st.image(image_paths[image_index], use_column_width=True)
 
