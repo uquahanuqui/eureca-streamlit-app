@@ -19,6 +19,10 @@ def create_streamlit_app():
         "Idol-lens": "https://www.lensgogo.biz/wp-content/uploads/2021/08/%EC%95%84%EC%9D%B4%EB%8F%8C%EB%B0%B0%EB%84%88.jpg",
         "HapaKristin": "https://cdn.winc.app/uploads/ppb/file/file/7926/KR_2023%EB%B8%94%ED%94%84_pcbn-44a881.jpg"
     }
+    
+    if category in img_url:
+        st.header(f"{category} Products")
+        st.image(img_url[category])
 
     # 이미지를 중앙에 위치시키기 위한 CSS 스타일
     centered_image_style = """
