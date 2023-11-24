@@ -37,8 +37,6 @@ st.markdown("---")
 search_query = st.text_input("Search :mag:")
 
 #
-streamlit run your_script.py
-
 import streamlit as st
 
 # 이미지 파일 경로를 리스트로 저장
@@ -49,8 +47,6 @@ image_index = st.slider('이미지 선택', 0, len(image_paths) - 1)
 
 # 선택된 이미지 표시
 st.image(image_paths[image_index], use_column_width=True)
-
-streamlit run your_script.py
 
 
 #프로필
