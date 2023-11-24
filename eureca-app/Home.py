@@ -37,6 +37,8 @@ st.markdown("---")
 search_query = st.text_input("Search :mag:")
 
 #
+streamlit run your_script.py
+
 import streamlit as st
 
 # 이미지 파일 경로를 리스트로 저장
