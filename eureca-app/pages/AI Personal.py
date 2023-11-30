@@ -4,8 +4,18 @@ import requests
 import json
 from io import BytesIO
 
+# 타이틀 & 이모티콘
+st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
+
+# 구분선
+st.divider()
+
+# 링크 버튼
+st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
+st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
+
 # 스트림릿 앱 제목
-st.title("Teachable Machine Image Classification")
+st.header("Teachable Machine Image Classification")
 
 # 이미지 업로드
 uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
