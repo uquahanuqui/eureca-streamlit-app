@@ -23,7 +23,7 @@ uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpe
 # 이미지 예측 함수
 def predict_image(image):
     # Teachable Machine 모델 API 엔드포인트
-    model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV"
+    model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
     
     # 이미지를 바이너리 데이터로 변환
     img_data = BytesIO()
@@ -48,7 +48,15 @@ if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded Image', use_column_width=True)
     st.write("")
-    
+
+    import requests
+
+    # 서버 응답 확인
+    response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
+
+    # 서버 응답 출력
+    print(response.text)
+
     # 예측 수행
     predictions = predict_image(image)
     
