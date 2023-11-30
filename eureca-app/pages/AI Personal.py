@@ -18,42 +18,6 @@ if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
-#Teachable Machine 모델 로드
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
-
-#Teachable Machine 모델 파일 경로 지정
-<script type="module">
-    const URL = 'https://teachablemachine.withgoogle.com/models/Y44cpwtyV';
-    let model, webcam, labelContainer, maxPredictions;
-
-    async function init() {
-        const modelURL = URL + 'model.json';
-        const metadataURL = URL + 'metadata.json';
-
-        model = await tmImage.load(modelURL, metadataURL);
-        maxPredictions = model.getTotalClasses();
-
-        // 웹캠 초기화
-        const flip = true;
-        webcam = new tmImage.Webcam(200, 200, flip); // 웹캠 해상도 설정
-        await webcam.setup(); // 웹캠 초기화
-        await webcam.play();
-    }
-    init();
-</script>
-
-#이미지 예측
-<script>
-    async function predict() {
-        const prediction = await model.predict(webcam.canvas);
-        // 예측 결과를 스트림릿 앱에 표시
-        const label = prediction[0].className;
-        document.getElementById('prediction').innerText = label;
-        // 추가 작업 가능 (예: 확률 표시)
-    }
-</script>
-
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
