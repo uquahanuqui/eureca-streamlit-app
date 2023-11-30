@@ -1,21 +1,8 @@
 import streamlit as st
 from PIL import Image
 import requests
-import json  # json 모듈 추가
+import json
 from io import BytesIO
-
-# 타이틀 & 이모티콘
-st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
-
-# Teachable Machine 모델 API 엔드포인트
-model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
-
-# 구분선
-st.divider()
-
-# 링크 버튼
-st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
-st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
 
 # 스트림릿 앱 제목
 st.title("Teachable Machine Image Classification")
@@ -23,7 +10,7 @@ st.title("Teachable Machine Image Classification")
 # 이미지 업로드
 uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
 
-# Teachable Machine 모델 API 엔드포인트 (바깥에서 정의)
+# Teachable Machine 모델 API 엔드포인트
 model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
 
 # 이미지 예측 함수
@@ -46,7 +33,6 @@ def predict_image(image):
     
     return prediction
 
-
 # 이미지 업로드 및 예측
 if uploaded_image is not None:
     image = Image.open(uploaded_image)
@@ -62,7 +48,7 @@ if uploaded_image is not None:
     response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
 
     # 서버 응답 출력
-    print(response.text)
+    st.text(response.text)
 
     # 예측 수행
     predictions = predict_image(image)
