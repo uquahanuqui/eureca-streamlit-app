@@ -7,6 +7,9 @@ from io import BytesIO
 # 타이틀 & 이모티콘
 st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
 
+# Teachable Machine 모델 API 엔드포인트
+model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
+
 # 구분선
 st.divider()
 
