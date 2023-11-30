@@ -69,6 +69,7 @@ if uploaded_image is not None:
     for class_name, score in predictions.items():
         st.write(f"{class_name}: {score:.4f}")
 
+
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
