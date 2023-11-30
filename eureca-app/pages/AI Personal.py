@@ -18,11 +18,11 @@ if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
-<!-- Teachable Machine 모델 로드 -->
+#Teachable Machine 모델 로드
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
 
-<!-- Teachable Machine 모델 파일 경로 지정 -->
+#Teachable Machine 모델 파일 경로 지정
 <script type="module">
     const URL = 'https://teachablemachine.withgoogle.com/models/Y44cpwtyV';
     let model, webcam, labelContainer, maxPredictions;
@@ -43,7 +43,7 @@ if uploaded_image is not None:
     init();
 </script>
 
-<!-- 이미지 예측 -->
+#이미지 예측
 <script>
     async function predict() {
         const prediction = await model.predict(webcam.canvas);
