@@ -1,3 +1,6 @@
+# Teachable Machine 모델 API 엔드포인트
+model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
+
 import streamlit as st
 from PIL import Image
 import requests
@@ -19,9 +22,6 @@ st.header("Teachable Machine Image Classification")
 
 # 이미지 업로드
 uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
-
-# Teachable Machine 모델 API 엔드포인트
-model_api = "https://teachablemachine.withgoogle.com/models/N1ZkEUop-/"
 
 # 이미지 예측 함수
 def predict_image(image):
