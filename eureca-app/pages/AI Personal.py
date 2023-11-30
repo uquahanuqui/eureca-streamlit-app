@@ -32,6 +32,13 @@ def predict_image(image):
     # 이미지 분류를 위한 POST 요청
     response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
     
+    try:
+    prediction = response.json()
+except json.JSONDecodeError as e:
+    st.error("An error occurred while decoding the JSON response.")
+    st.error(f"Error Message: {str(e)}")
+    prediction = {}  # 빈 딕셔너리 또는 오류 처리에 맞는 다른 값을 사용할 수 있습니다.
+
     # API 응답에서 예측 결과 추출
     prediction = response.json()
     return prediction
