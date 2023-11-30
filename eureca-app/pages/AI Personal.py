@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import requests
 from io import BytesIO
+import json
 
 #타이틀 & 이모티콘
 st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
@@ -35,10 +36,11 @@ def predict_image(image):
     # API 응답에서 예측 결과 추출
     try:
         prediction = response.json()
-    except json.JSONDecodeError as e:
+    except json.decoder.JSONDecodeError as e:
         st.error("An error occurred while decoding the JSON response.")
         st.error(f"Error Message: {str(e)}")
         prediction = {}  # 빈 딕셔너리 또는 오류 처리에 맞는 다른 값을 사용할 수 있습니다.
+
 
 
 # 이미지 업로드 및 예측
