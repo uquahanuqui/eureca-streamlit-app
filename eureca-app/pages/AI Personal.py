@@ -1,4 +1,7 @@
 import streamlit as st
+from PIL import Image
+import requests
+from io import BytesIO
 
 #타이틀 & 이모티콘
 st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
@@ -9,6 +12,45 @@ st.divider()
 #링크 버튼
 st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
+
+# 스트림릿 앱 제목
+st.title("Teachable Machine Image Classification")
+
+# 이미지 업로드
+uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
+
+# 이미지 예측 함수
+def predict_image(image):
+    # Teachable Machine 모델 API 엔드포인트
+    model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV"
+    
+    # 이미지를 바이너리 데이터로 변환2
+    img_data = BytesIO()
+    image.save(img_data, format="JPEG")
+    img_data = img_data.getvalue()
+    
+    # 이미지 분류를 위한 POST 요청
+    response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
+    
+    # API 응답에서 예측 결과 추출
+    prediction = response.json()
+    return prediction
+
+# 이미지 업로드 및 예측
+if uploaded_image is not None:
+    image = Image.open(uploaded_image)
+    st.image(image, caption='Uploaded Image', use_column_width=True)
+    st.write("")
+    
+    # 예측 수행
+    predictions = predict_image(image)
+    
+    # 예측 결과 표시
+    st.subheader("Prediction Results")
+    
+    for class_name, score in predictions.items():
+        st.write(f"{class_name}: {score:.4f}")
+
 
 #프로필
 st.markdown("---")
@@ -71,4 +113,3 @@ st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span st
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
 st.divider()
-
