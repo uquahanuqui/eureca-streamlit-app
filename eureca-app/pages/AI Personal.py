@@ -1,16 +1,16 @@
 import streamlit as st
 from PIL import Image
 import requests
+import json  # json 모듈 추가
 from io import BytesIO
-import json
 
-#타이틀 & 이모티콘
+# 타이틀 & 이모티콘
 st.markdown("<h1 style='text-align: center;'>AI Personal</h1>", unsafe_allow_html=True)
 
-#구분선
+# 구분선
 st.divider()
 
-#링크 버튼
+# 링크 버튼
 st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
 
@@ -25,24 +25,23 @@ def predict_image(image):
     # Teachable Machine 모델 API 엔드포인트
     model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV"
     
-    # 이미지를 바이너리 데이터로 변환2
+    # 이미지를 바이너리 데이터로 변환
     img_data = BytesIO()
     image.save(img_data, format="JPEG")
     img_data = img_data.getvalue()
     
     # 이미지 분류를 위한 POST 요청
     response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
-
-    # 서버 응답에서 JSON 데이터 추출
-    response_text = response.text
-
-    # JSON 데이터 파싱
+    
     try:
-        prediction = json.loads(response_text)
+        # JSON 데이터 파싱
+        prediction = response.json()
     except json.decoder.JSONDecodeError as e:
         st.error("An error occurred while decoding the JSON response.")
         st.error(f"Error Message: {str(e)}")
         prediction = {}  # 빈 딕셔너리 또는 오류 처리에 맞는 다른 값을 사용할 수 있습니다.
+    
+    return prediction
 
 # 이미지 업로드 및 예측
 if uploaded_image is not None:
@@ -58,7 +57,6 @@ if uploaded_image is not None:
     
     for class_name, score in predictions.items():
         st.write(f"{class_name}: {score:.4f}")
-
 
 #프로필
 st.markdown("---")
