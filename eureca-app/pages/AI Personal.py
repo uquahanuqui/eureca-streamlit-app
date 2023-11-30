@@ -20,11 +20,11 @@ st.title("Teachable Machine Image Classification")
 # 이미지 업로드
 uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
 
+# Teachable Machine 모델 API 엔드포인트 (바깥에서 정의)
+model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
+
 # 이미지 예측 함수
 def predict_image(image):
-    # Teachable Machine 모델 API 엔드포인트
-    model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
-    
     # 이미지를 바이너리 데이터로 변환
     img_data = BytesIO()
     image.save(img_data, format="JPEG")
@@ -43,14 +43,18 @@ def predict_image(image):
     
     return prediction
 
+
 # 이미지 업로드 및 예측
 if uploaded_image is not None:
     image = Image.open(uploaded_image)
     st.image(image, caption='Uploaded Image', use_column_width=True)
     st.write("")
 
-    import requests
-
+    # 이미지를 바이너리 데이터로 변환
+    img_data = BytesIO()
+    image.save(img_data, format="JPEG")
+    img_data = img_data.getvalue()
+    
     # 서버 응답 확인
     response = requests.post(model_api, files={"file": ("image.jpg", img_data, "image/jpeg")})
 
