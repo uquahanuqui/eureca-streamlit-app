@@ -21,7 +21,7 @@ st.header("Teachable Machine Image Classification")
 uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
 
 # Teachable Machine 모델 API 엔드포인트
-model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
+model_api = "https://teachablemachine.withgoogle.com/models/N1ZkEUop-/"
 
 # 이미지 예측 함수
 def predict_image(image):
