@@ -10,14 +10,6 @@ st.divider()
 st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
 
-# 파일 업로드
-uploaded_image = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
-
-# 이미지 표시 (선택사항)
-if uploaded_image is not None:
-    image = Image.open(uploaded_image)
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
-
 #프로필
 st.markdown("---")
 # 전체 배경색을 흰색으로 설정
