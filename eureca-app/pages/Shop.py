@@ -229,8 +229,8 @@ def style_table():
         table.dataframe {
             min-width: 100%;
             max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 20px;
+            margin-right: 20px;
         }
     </style>
     """
