@@ -20,6 +20,36 @@ def create_streamlit_app():
         "HapaKristin": "https://cdn.winc.app/uploads/ppb/file/file/7926/KR_2023%EB%B8%94%ED%94%84_pcbn-44a881.jpg"
     }
     
+    
+    import streamlit as st
+import pandas as pd
+
+# 데이터 정의
+lens_me_data = [
+    ("유스 원데이 블랙", "13.0mm", "18,000"),
+    ("유스 원데이 쵸코", "13.0mm", "18,000"),
+    ("유스 원데이 그레이", "13.0mm", "18,000"),
+    ("오리지널 원데이 시리즈 베이블리 그레이(10P)", "13.4mm", "18,000"),
+    ("악마 원데이 러버블 쵸코", "13.0mm", "55,000"),
+    ("악마 원데이 러버블 그레이", "13.0mm", "55,000")
+]
+df = pd.DataFrame(lens_me_data, columns=["Product Name", "Lens Size", "Product Price"])
+
+# 링크 생성 함수
+def make_clickable(name, link):
+    links = {
+        "유스 원데이 블랙": "https://www.lens-me.com/shop/goods_detail.php?ps_uid=61706",
+        "유스 원데이 쵸코": "https://www.lens-me.com/shop/goods_detail.php?ps_uid=61680"
+    }
+    return f'<a href="{links.get(name, "#")}" target="_blank">{name}</a>' if name in links else name
+
+# 데이터 프레임에 링크 적용
+df['Product Name'] = df['Product Name'].apply(lambda x: make_clickable(x, ""))
+
+# 스트림릿에 데이터 프레임 표시
+st.header("Lens-me Product")
+st.write(df.to_html(escape=False), unsafe_allow_html=True)
+
     if category in img_url:
         st.header(f"{category} Products")
         st.image(img_url[category])
