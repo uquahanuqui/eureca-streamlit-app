@@ -54,7 +54,7 @@ if st.button("Run JavaScript"):
 
 
 
-'''# Teachable Machine 모델 API 엔드포인트
+# Teachable Machine 모델 API 엔드포인트
 model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
 
 import streamlit as st
@@ -186,4 +186,4 @@ st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>OFFICE</span></p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
-st.divider()'''
+st.divider()
