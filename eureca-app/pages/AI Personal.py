@@ -1,8 +1,5 @@
 import streamlit as st
 
-# Streamlit 앱 제목
-st.title("Streamlit with JavaScript")
-
 # JavaScript 코드 작성
 javascript_code = """
     // JavaScript 코드 작성
