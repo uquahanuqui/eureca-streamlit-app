@@ -213,32 +213,32 @@ def create_streamlit_app():
         ]
         df = pd.DataFrame(lens_me_data, columns=["Product Name", "Lens Size", "Product Price"])
 
-        import streamlit as st
-import pandas as pd
+    # CSS를 사용하여 테이블 스타일 지정
+def style_table():
+    return """
+    <style>
+        .dataframe th {
+            font-size: 16px;
+        }
+        .dataframe td {
+            font-size: 14px;
+        }
+        .dataframe tbody tr:nth-of-type(odd) {
+            background-color: lightgray;
+        }
+        table.dataframe {
+            min-width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    """
 
-# 데이터 정의
-lens_me_data = [
-    ("유스 원데이 블랙", "13.0mm", "18,000"),
-    ("유스 원데이 쵸코", "13.0mm", "18,000"),
-    ("유스 원데이 그레이", "13.0mm", "18,000"),
-    ("오리지널 원데이 시리즈 베이블리 그레이(10P)", "13.4mm", "18,000"),
-    ("악마 원데이 러버블 쵸코", "13.0mm", "55,000"),
-    ("악마 원데이 러버블 그레이", "13.0mm", "55,000")
-]
-df = pd.DataFrame(lens_me_data, columns=["Product Name", "Lens Size", "Product Price"])
+# 스타일 적용
+st.markdown(style_table(), unsafe_allow_html=True)
 
-# 링크 생성 함수
-def make_clickable(name, link):
-    links = {
-        "유스 원데이 블랙": "https://www.lens-me.com/shop/goods_detail.php?ps_uid=61706",
-        "유스 원데이 쵸코": "https://www.lens-me.com/shop/goods_detail.php?ps_uid=61680"
-    }
-    return f'<a href="{links.get(name, "#")}" target="_blank">{name}</a>' if name in links else name
-
-# 데이터 프레임에 링크 적용
-df['Product Name'] = df['Product Name'].apply(lambda x: make_clickable(x, ""))
-
-# 스트림릿에 데이터 프레임 표시
+# 데이터 프레임을 스트림릿에 표시
 st.header("Lens-me Product")
 st.write(df.to_html(escape=False), unsafe_allow_html=True)
 
