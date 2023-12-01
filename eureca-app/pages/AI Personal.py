@@ -1,5 +1,5 @@
-'''# Teachable Machine 모델 API 엔드포인트
-model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"'''
+# Teachable Machine 모델 API 엔드포인트
+model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
 
 import streamlit as st
 from PIL import Image
@@ -17,10 +17,7 @@ st.divider()
 st.link_button("카카오 채널", "http://pf.kakao.com/_xblxexjG")
 st.link_button("채팅 바로가기", "http://pf.kakao.com/_xblxexjG/chat")
 
-# iframe을 통해 티처블 머신 웹 페이지를 포함시킬 공간을 만듭니다.
-st.markdown('<iframe src="https://teachablemachine.withgoogle.com/models/Y44cpwtyV/" width="800" height="600"></iframe>', unsafe_allow_html=True)
-
-'''# 스트림릿 앱 제목
+# 스트림릿 앱 제목
 st.header("Teachable Machine Image Classification")
 
 # 이미지 업로드
@@ -70,7 +67,7 @@ if uploaded_image is not None:
     st.subheader("Prediction Results")
     
     for class_name, score in predictions.items():
-        st.write(f"{class_name}: {score:.4f}")'''
+        st.write(f"{class_name}: {score:.4f}")
 
 
 #프로필
