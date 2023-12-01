@@ -1,4 +1,60 @@
-# Teachable Machine 모델 API 엔드포인트
+import streamlit as st
+
+# Streamlit 앱 제목
+st.title("Streamlit with JavaScript")
+
+# JavaScript 코드 작성
+javascript_code = """
+    // JavaScript 코드 작성
+    // (위의 예제 코드를 여기에 추가)
+    // Teachable Machine 모델 API 엔드포인트
+const modelApi = "https://teachablemachine.withgoogle.com/models/N1ZkEUop-/";
+
+// 이미지 예측 함수
+function predictImage(imageData) {
+    // 이미지 분류를 위한 POST 요청
+    fetch(modelApi, {
+        method: "POST",
+        body: imageData,
+    })
+    .then((response) => response.json())
+    .then((prediction) => {
+        // 예측 결과 처리
+        console.log(prediction);
+    })
+    .catch((error) => {
+        console.error("An error occurred while making the prediction:", error);
+    });
+}
+
+"""
+
+# JavaScript 코드를 Streamlit 앱에 추가
+st.components.v1.html(javascript_code, height=300)
+
+# Streamlit 앱 내에서 JavaScript 함수 실행 버튼 추가
+if st.button("Run JavaScript"):
+    js_code = """
+    // JavaScript 함수 호출
+    predictImage(imageData);
+    """
+    st.components.v1.html(js_code, height=0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''# Teachable Machine 모델 API 엔드포인트
 model_api = "https://teachablemachine.withgoogle.com/models/Y44cpwtyV/"
 
 import streamlit as st
@@ -130,4 +186,4 @@ st.write(" ")
 st.write("<p style='text-align: center; margin: 5px; line-height: 0.8;'><span style='font-size: 15px;'>OFFICE</span></p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>#77 Kookmin University Management Hall, Jeongneung-ro, Seongbuk-gu, Seoul</p>", unsafe_allow_html=True)
 st.caption("<p style='text-align: center; margin: 5px; line-height: 0.8;'>서울특별시 성북구 정릉로 77 국민대학교 경영관 (02707)</p>", unsafe_allow_html=True)
-st.divider()
+st.divider()'''
