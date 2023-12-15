@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .divider {
+            width: 100%;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .category-selector {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .category-selector select {
+            width: 200px;
+            padding: 5px;
+        }
+        .product-header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .product-image {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shop</h1>
+    <div class="divider"></div>
+    <div class="category-selector">
+        <!-- Add category selection dropdown here -->
+        <select id="category-select">
+            <option value="Lens-me">Lens-me</option>
+            <option value="O-lens">O-lens</option>
+            <option value="Idol-lens">Idol-lens</option>
+            <option value="HapaKristin">HapaKristin</option>
+        </select>
+    </div>
+    <div class="product-header">
+        <h2 id="product-category"></h2>
+        <img id="product-image" src="" alt="Product Image">
+    </div>
+    
+    <!-- Add JavaScript code below this line -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const categorySelect = document.getElementById("category-select");
+            const productCategory = document.getElementById("product-category");
+            const productImage = document.getElementById("product-image");
+
+            categorySelect.addEventListener("change", function () {
+                const selectedCategory = categorySelect.value;
+                productCategory.textContent = `${selectedCategory} Products`;
+
+                const imgUrls = {
+                    "Lens-me": "https://i.ytimg.com/vi/aRrlD-9WIbk/maxresdefault.jpg",
+                    "O-lens": "https://i.pinimg.com/736x/94/fd/da/94fdda90da9d616ae4e70dca6e34e220.jpg",
+                    "Idol-lens": "https://www.idollens.kr/data/banner/18",
+                    "HapaKristin": "https://cdn.winc.app/uploads/ppb/file/file/7926/KR_2023%EB%B8%94%ED%94%84_pcbn-44a881.jpg"
+                };
+
+                productImage.src = imgUrls[selectedCategory];
+            });
+        });
+    </script>
+</body>
+</html>
