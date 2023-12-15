@@ -149,3 +149,88 @@
 </body>
 </html>
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens-me 제품</title>
+    <!-- 여기에 CSS 스타일 시트를 포함하세요 -->
+</head>
+<body>
+    <header>
+        <h1>Lens-me 제품</h1>
+    </header>
+    <main>
+        <section id="image-section">
+            <!-- 제품 이미지를 위한 자리 표시자 -->
+        </section>
+        <section id="table-section">
+            <!-- 제품 테이블을 위한 자리 표시자 -->
+        </section>
+    </main>
+    <script>
+        // JavaScript 코드
+        document.addEventListener("DOMContentLoaded", function () {
+            // 카테고리에 따라 이미지와 테이블 데이터를 동적으로 업데이트
+            const category = "Lens-me"; // 선택한 카테고리 (예: "Lens-me")
+
+            // 이미지 업데이트
+            const imageSection = document.getElementById("image-section");
+            if (category in img_url) {
+                const image = document.createElement("img");
+                image.src = img_url[category];
+                imageSection.appendChild(image);
+            } else {
+                // 카테고리에 해당하는 이미지가 없을 경우 처리
+            }
+
+            // 테이블 업데이트
+            const tableSection = document.getElementById("table-section");
+            if (category === "Lens-me") {
+                // Data and DataFrame for Lens-me
+                const lensMeData = [
+                    ["유스 원데이 블랙", "13.0mm", "18,000"],
+                    ["유스 원데이 쵸코", "13.0mm", "18,000"],
+                    ["유스 원데이 그레이", "13.0mm", "18,000"],
+                    ["오리지널 원데이 시리즈 베이블리 그레이(10P)", "13.4mm", "18,000"],
+                    ["악마 원데이 러버블 쵸코", "13.0mm", "55,000"],
+                    ["악마 원데이 러버블 그레이", "13.0mm", "55,000"]
+                ];
+
+                const table = document.createElement("table");
+                const tableBody = document.createElement("tbody");
+
+                // Table header
+                const headerRow = document.createElement("tr");
+                ["Product Name", "Lens Size", "Product Price"].forEach(headerText => {
+                    const th = document.createElement("th");
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+                tableBody.appendChild(headerRow);
+
+                // Table rows
+                lensMeData.forEach(rowData => {
+                    const row = document.createElement("tr");
+                    rowData.forEach(cellData => {
+                        const cell = document.createElement("td");
+                        cell.textContent = cellData;
+                        row.appendChild(cell);
+                    });
+                    tableBody.appendChild(row);
+                });
+
+                table.appendChild(tableBody);
+                tableSection.appendChild(table);
+            } else {
+                // 다른 카테고리에 대한 처리
+            }
+        });
+    </script>
+</body>
+</html>
+
+
