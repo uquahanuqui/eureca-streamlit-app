@@ -150,6 +150,49 @@
 </html>
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>lens-me data set</title>
+</head>
+<body>
+    <table border="1" id="lensTable">
+        <tr>
+            <th>상품명</th>
+            <th>직경</th>
+            <th>가격</th>
+        </tr>
+    </table>
+
+    <script>
+        // CSV 형식의 데이터
+        var csvData = `"[아큐브] 디파인 샤인 브라운", "12.7mm", "136,000"
+        "유스 원데이 블랙", "13.0mm", "18,000"
+        "유스 원데이 쵸코", "13.0mm", "18,000"
+        "유스 원데이 그레이", "13.0mm", "18,000"
+        "오리지널 원데이 시리즈 베이블리 그레이(10P)", "13.4mm", "18,000"
+        "악마 원데이 러버블 쵸코", "13.0mm", "55,000"
+        "악마 원데이 러버블 그레이", "13.0mm", "55,000"`;
+
+        // CSV 데이터를 파싱하여 행을 분리
+        var rows = csvData.split("\n");
+
+        // HTML 표에 행 추가
+        var table = document.getElementById("lensTable");
+        rows.forEach(function(row) {
+            var cells = row.split(",");
+            var newRow = table.insertRow(table.rows.length);
+            cells.forEach(function(cell) {
+                var newCell = newRow.insertCell(newRow.cells.length);
+                newCell.appendChild(document.createTextNode(cell.replace(/"/g, '').trim()));
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
 
 
 
