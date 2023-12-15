@@ -3,6 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Q&A</title>
+    <style>
+        body {
+            background-color: white;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-link {
+            font-size: 14px;
+            text-align: center;
+            color: black !important;
+            background-color: transparent;
+            border: 1px solid black;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+
+        .owner-info, .customer-care p, .office p {
+            margin: 5px;
+            line-height: 1.2;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* 네비게이션 메뉴 스타일 */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .nav-menu a:hover {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 메뉴 -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="guide.html">Guide</a></li>
+            <li><a href="qna.html">Q&A</a></li>
+            <li><a href="ai.html">AI Personal</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </nav>
 </head>
 <body>
     <h1 style="text-align: center;">Q&A</h1>
@@ -25,43 +107,7 @@
             * 업무시간 외에 전송된 메세지는 전달되지 않습니다.
         </p>
     </details>
-    
-    <!-- 두 번째 질문과 답변 -->
-    <details>
-        <summary>Q. 무통장 입금 기한이 궁금합니다.</summary>
-        <p style="margin: 5px 0; line-height: 1.5;">
-            무통장 입금 기한은 주문 후 24시간입니다.
-        </p>
-    </details>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Q&A</title>
-</head>
-<body>
-    <h1 style="text-align: center;">Q&A</h1>
-    <hr>
-    <p style="margin: 0px;">Call 82+10 4536 6713 (11:00 ~ 17:00 / 13:00 ~ 14:00 점심시간)</p>
-    <p style="margin: 0px;">Email hyb0320@kookmin.ac.kr</p>
-    <p style="margin: 0px;">Kakaotalk 11:00 ~ 17:00 (13:00 ~ 14:00 점심시간)</p>
-    <hr>
-    <p style="font-size: 27px; font-weight: bold; margin: 0px 0;">FAQ</p>
-    <hr>
-    
-    <!-- 첫 번째 질문과 답변 -->
-    <details>
-        <summary>Q. 실시간 문의가 가능한가요?</summary>
-        <p style="margin: 5px 0; line-height: 1.5;">
-            렌즈 인 그레이 카카오톡 채널을 통해 실시간 상담원 연결이 가능합니다.<br>
-            월~금 11:00~17:00<br>
-            점심시간 : 12:00~13:00<br>
-            * 주말 및 공휴일 제외<br>
-            * 업무시간 외에 전송된 메세지는 전달되지 않습니다.
-        </p>
-    </details>
+    <br>
     
     <!-- 두 번째 질문과 답변 -->
     <details>
@@ -71,6 +117,7 @@
         </p>
     </details>
 
+    <br>
     <!-- 세 번째 질문과 답변 -->
     <details>
         <summary>Q. 무통장 입금 확인이 되지 않습니다.</summary>
@@ -81,6 +128,7 @@
         </p>
     </details>
 
+    <br>
     <!-- 네 번째 질문과 답변 -->
     <details>
         <summary>Q. 결제수단을 변경하고 싶습니다.</summary>
@@ -90,6 +138,7 @@
         </p>
     </details>
 
+    <br>
     <!-- 다섯 번째 질문과 답변 -->
     <details>
         <summary>Q. 적립금 사용 최소 금액 및 기한이 궁금합니다.</summary>
@@ -98,6 +147,7 @@
         </p>
     </details>
 
+    <br>
     <!-- 여섯 번째 질문과 답변 -->
     <details>
         <summary>Q. AI Personal 추천이 정확한가요?</summary>
@@ -115,6 +165,7 @@
     <title>Q&A</title>
 </head>
 <body>
+    <br>
     <!-- 질문과 답변 Expander -->
     <details>
         <summary>Q. 오프라인 쇼룸이 있나요?</summary>
@@ -168,24 +219,6 @@
         }
     </style>
 </head>
-<body>
-    <h1 style='text-align: center;'>❄️❄️❄️</h1>
-    <div class="btn-container">
-        <a href='https://www.instagram.com/lensingray.official/' class='btn-link'>INSTAGRAM</a>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <a href='https://blog.naver.com/lens_in_gray' class='btn-link'>BLOG</a>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <span>&nbsp;</span>
-        <a href='http://pf.kakao.com/_xblxexjG' class='btn-link'>KAKAO CHANNEL</a>
-    </div>
-</body>
 </html>
 <!DOCTYPE html>
 <html>
@@ -215,6 +248,7 @@
 </head>
 <body>
     <h1 style='text-align: center;'>❄️❄️❄️</h1>
+    <hr>
     <div class="btn-container">
         <a href='https://www.instagram.com/lensingray.official/' class='btn-link'>INSTAGRAM</a>
         <span>&nbsp;</span>
