@@ -78,3 +78,74 @@
     </script>
 </body>
 </html>
+
+
+
+    <title>Product Display</title>
+    <style>
+        /* CSS 스타일 */
+        .dataframe th {
+            font-size: 16px;
+        }
+        .dataframe td {
+            font-size: 14px;
+        }
+        .dataframe tbody tr:nth-of-type(odd) {
+            background-color: lightgray;
+        }
+        table.dataframe {
+            min-width: 100%;
+            max-width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="category" style="display: none;">{{ category }}</div>
+    <div id="product-container"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var category = $("#category").text();
+            var productContainer = $("#product-container");
+
+            function displayProducts(products) {
+                var table = $("<table>").addClass("dataframe");
+                var thead = $("<thead>").appendTo(table);
+                var tbody = $("<tbody>").appendTo(table);
+
+                // 테이블 헤더 생성
+                var headerRow = $("<tr>").appendTo(thead);
+                $.each(products[0], function(key, value) {
+                    headerRow.append($("<th>").text(key));
+                });
+
+                // 테이블 본문 생성
+                $.each(products, function(_, product) {
+                    var row = $("<tr>").appendTo(tbody);
+                    $.each(product, function(_, value) {
+                        row.append($("<td>").text(value));
+                    });
+                });
+
+                productContainer.html(table);
+            }
+
+            // 카테고리에 따라 제품 데이터 가져오기
+            $.ajax({
+                url: "/get_products?category=" + category,
+                type: "GET",
+                success: function(response) {
+                    var products = JSON.parse(response);
+                    displayProducts(products);
+                },
+                error: function(error) {
+                    console.error("Error fetching products: ", error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
