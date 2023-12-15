@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .model-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        .label-container {
+            text-align: left;
+        }
+        .prediction {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        video {
+            width: 100%;
+            max-width: 640px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="model-container">
+        <h1>Teachable Machine</h1>
+        <div id="webcam-container">
+            <h2>퍼스널 컬러 모델</h2>
+            <input type="file" id="webcamFileInput" accept="image/*">
+            <button type="button" onclick="predictWebcam()">예측</button>
+            <div id="webcam-label-container" class="label-container"></div>
+        </div>
+        <div id="eyelid-container">
+            <h2>눈꺼풀 모양 모델</h2>
+            <input type="file" id="eyelidFileInput" accept="image/*">
+            <button type="button" onclick="predictEyelid()">예측</button>
+            <div id="eyelid-label-container" class="label-container"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const webcamURL = "https://teachablemachine.withgoogle.com/models/N1ZkEUop-/";
+        const eyelidURL = "https://teachablemachine.withgoogle.com/models/UA41lt7lJ/";
+
+        let webcamModel, eyelidModel, maxPredictions;
+        let webcamLabelContainer, eyelidLabelContainer;
+
+        async function predictWebcam() {
+            const fileInput = document.getElementById("webcamFileInput");
+            const selectedFile = fileInput.files[0];
+
+            if (!selectedFile) {
+                alert("이미지 파일을 선택하세요.");
+                return;
+            }
+
+            const imageElement = document.createElement("img");
+            imageElement.src = URL.createObjectURL(selectedFile);
+
+            webcamLabelContainer = document.getElementById("webcam-label-container");
+            webcamLabelContainer.innerHTML = '';
+
+            const prediction = await webcamModel.predict(imageElement);
+            
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                const predictionDiv = document.createElement("div");
+                predictionDiv.textContent = classPrediction;
+                webcamLabelContainer.appendChild(predictionDiv);
+            }
+        }
+
+        async function predictEyelid() {
+            const fileInput = document.getElementById("eyelidFileInput");
+            const selectedFile = fileInput.files[0];
+
+            if (!selectedFile) {
+                alert("이미지 파일을 선택하세요.");
+                return;
+            }
+
+            const imageElement = document.createElement("img");
+            imageElement.src = URL.createObjectURL(selectedFile);
+
+            eyelidLabelContainer = document.getElementById("eyelid-label-container");
+            eyelidLabelContainer.innerHTML = '';
+
+            const prediction = await eyelidModel.predict(imageElement);
+            
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                const predictionDiv = document.createElement("div");
+                predictionDiv.textContent = classPrediction;
+                eyelidLabelContainer.appendChild(predictionDiv);
+            }
+        }
+
+        window.onload = async () => {
+            webcamModel = await tmImage.load(webcamURL + "model.json", webcamURL + "metadata.json");
+            maxPredictions = webcamModel.getTotalClasses();
+
+            eyelidModel = await tmImage.load(eyelidURL + "model.json", eyelidURL + "metadata.json");
+        };
+    </script>
+</body>
+</html>
