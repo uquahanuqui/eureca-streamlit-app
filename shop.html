@@ -1,5 +1,91 @@
-if category == "Lens-me":
-    html_code = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .divider {
+            width: 100%;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .category-selector {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .category-selector select {
+            width: 200px;
+            padding: 5px;
+        }
+        .product-container {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3x3 그리드로 배치 */
+            gap: 20px; /* 그리드 간격 설정 */
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        .product-item h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shop</h1>
+    <div class="divider"></div>
+    <div class="category-selector">
+        <!-- Add category selection dropdown here -->
+        <select id="category-select">
+            <option value="Lens-me">Lens-me</option>
+            <option value="O-lens">O-lens</option>
+            <option value="Idol-lens">Idol-lens</option>
+            <option value="HapaKristin">HapaKristin</option>
+        </select>
+    </div>
+    <div class="product-container">
+        <!-- 상품 데이터 및 이미지는 JavaScript를 통해 동적으로 추가됩니다. -->
+    </div>
+    
+    <!-- Add JavaScript code below this line -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const categorySelect = $("#category-select");
+            const productContainer = $(".product-container");
+
+            function displayProducts(products) {
+                productContainer.empty();
+
+                $.each(products, function(_, product) {
+                    const productItem = $("<div>").addClass("product-item");
+                    const productImage = $("<img>").attr("src", product.image).attr("alt", product.name);
+                    const productName = $("<h2>").text(product.name);
+                    const productPrice = $("<p>").text("가격: " + product.price);
+
+                    productItem.append(productImage, productName, productPrice);
+                    productContainer.append(productItem);
+                });
+            }
+
+            
 
 <!DOCTYPE html>
 <html lang="en">
@@ -239,9 +325,6 @@ if category == "Lens-me":
 </html>
 
 
-elif category == "O-lens":
-    html_code = """
-
 
 
 <!DOCTYPE html>
@@ -339,8 +422,6 @@ elif category == "O-lens":
 
 
 
-elif category == "Idol-lens":
-    html_code = """
 
 
 
@@ -405,9 +486,6 @@ elif category == "Idol-lens":
 </html>
 
 
-elif category == "HapaKristin":
-    html_code = """
-
 
 <!DOCTYPE html>
 <html>
@@ -451,16 +529,10 @@ elif category == "HapaKristin":
             });
         });
     </script>
-
-    else:
-    # 다른 카테고리에 대한 처리 (이 예제에서는 없음)
-    html_code = ""
     
 </body>
 </html>
 
-# 생성된 HTML 코드 반환
-html_cod
 
 
 
@@ -490,97 +562,6 @@ html_cod
         }
     </style>
 </head>
-<body>
 
-<!-- Lens-me Product -->
-<h2>Lens-me Product</h2>
-<table>
-    <tr>
-        <th>Product Name</th>
-        <th>Lens Size</th>
-        <th>Product Price</th>
-    </tr>
-    <tr>
-        <td>유스 원데이 블랙</td>
-        <td>13.0mm</td>
-        <td>18,000</td>
-    </tr>
-    <tr>
-        <td>유스 원데이 쵸코</td>
-        <td>13.0mm</td>
-        <td>18,000</td>
-    </tr>
-</table>
-
-<!-- O-lens Product -->
-<h2>O-lens Product</h2>
-<table>
-    <tr>
-        <th>Product Name</th>
-        <th>Product composition</th>
-        <th>Product Price</th>
-        <th>Lens Size</th>
-    </tr>
-    <tr>
-        <td>워터파인</td>
-        <td>(40P)</td>
-        <td>40,000</td>
-        <td>14.0mm (1Day 권장)</td>
-    </tr>
-    <tr>
-        <td>샤인터치 밀키브라운</td>
-        <td>(20P)</td>
-        <td>34,000</td>
-        <td>12.7mm (1Day 권장)</td>
-    </tr>
-</table>
-
-<!-- Idol-lens Product -->
-<h2>Idol-lens Product</h2>
-<table>
-    <tr>
-        <th>Product Name</th>
-        <th>Product Price</th>
-        <th>Lens Size</th>
-        <th>Use period</th>
-    </tr>
-    <tr>
-        <td>YURIAL MAX - EARL GRAY 예약수령</td>
-        <td>26,000원</td>
-        <td>BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%</td>
-        <td>사용기간 : 1개월</td>
-    </tr>
-    <tr>
-        <td>YURIAL MAX - WATER BROWN 예약수령</td>
-        <td>26,000원</td>
-        <td>BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%</td>
-        <td>사용기간 : 1개월</td>
-    </tr>
-</table>
-
-<!-- HapaKristin Product -->
-<h2>HapaKristin Product</h2>
-<table>
-    <tr>
-        <th>Product Name</th>
-        <th>Use period</th>
-        <th>Lens Size</th>
-        <th>Product Price</th>
-    </tr>
-    <tr>
-        <td>쇼퍼홀릭 크리스틴 - 미드나잇 그레이</td>
-        <td>한달용</td>
-        <td>13mm(14.2mm)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>웨이크업 크리스틴 원데이 - 던 브라운</td>
-        <td>원데이</td>
-        <td>12.7mm(14.2mm)</td>
-        <td>19,000원</td>
-    </tr>
-</table>
-
-</body>
 </html>
 
