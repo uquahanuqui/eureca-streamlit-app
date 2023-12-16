@@ -32,11 +32,6 @@
             margin: 10px 0;
             font-size: 16px;
         }
-        video {
-            width: 100%;
-            max-width: 640px;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
@@ -74,18 +69,25 @@
 
             const imageElement = document.createElement("img");
             imageElement.src = URL.createObjectURL(selectedFile);
+            imageElement.onload = async () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = 224; // 모델에 맞는 크기 설정
+                canvas.height = 224;
+                ctx.drawImage(imageElement, 0, 0, canvas.width, canvas.height);
 
-            webcamLabelContainer = document.getElementById("webcam-label-container");
-            webcamLabelContainer.innerHTML = '';
+                webcamLabelContainer = document.getElementById("webcam-label-container");
+                webcamLabelContainer.innerHTML = '';
 
-            const prediction = await webcamModel.predict(imageElement);
-            
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                const predictionDiv = document.createElement("div");
-                predictionDiv.textContent = classPrediction;
-                webcamLabelContainer.appendChild(predictionDiv);
-            }
+                const prediction = await webcamModel.predict(canvas);
+
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    const predictionDiv = document.createElement("div");
+                    predictionDiv.textContent = classPrediction;
+                    webcamLabelContainer.appendChild(predictionDiv);
+                }
+            };
         }
 
         async function predictEyelid() {
@@ -99,25 +101,42 @@
 
             const imageElement = document.createElement("img");
             imageElement.src = URL.createObjectURL(selectedFile);
+            imageElement.onload = async () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = 224; // 모델에 맞는 크기 설정
+                canvas.height = 224;
+                ctx.drawImage(imageElement, 0, 0, canvas.width, canvas.height);
 
-            eyelidLabelContainer = document.getElementById("eyelid-label-container");
-            eyelidLabelContainer.innerHTML = '';
+                eyelidLabelContainer = document.getElementById("eyelid-label-container");
+                eyelidLabelContainer.innerHTML = '';
 
-            const prediction = await eyelidModel.predict(imageElement);
-            
-            for (let i = 0; i < maxPredictions; i++) {
-                const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                const predictionDiv = document.createElement("div");
-                predictionDiv.textContent = classPrediction;
-                eyelidLabelContainer.appendChild(predictionDiv);
-            }
+                const prediction = await eyelidModel.predict(canvas);
+
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                    const predictionDiv = document.createElement("div");
+                    predictionDiv.textContent = classPrediction;
+                    eyelidLabelContainer.appendChild(predictionDiv);
+                }
+            };
         }
 
         window.onload = async () => {
-            webcamModel = await tmImage.load(webcamURL + "model.json", webcamURL + "metadata.json");
-            maxPredictions = webcamModel.getTotalClasses();
+            try {
+                webcamModel = await tmImage.load(webcamURL + "model.json", webcamURL + "metadata.json");
+                maxPredictions = webcamModel.getTotalClasses();
+            } catch (error) {
+                alert("웹캠 모델을 불러오는 데 실패했습니다.");
+                console.error("웹캠 모델 로드 오류:", error);
+            }
 
-            eyelidModel = await tmImage.load(eyelidURL + "model.json", eyelidURL + "metadata.json");
+            try {
+                eyelidModel = await tmImage.load(eyelidURL + "model.json", eyelidURL + "metadata.json");
+            } catch (error) {
+                alert("눈꺼풀 모델을 불러오는 데 실패했습니다.");
+                console.error("눈꺼풀 모델 로드 오류:", error);
+            }
         };
     </script>
 </body>
