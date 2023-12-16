@@ -49,6 +49,11 @@
             <button type="button" onclick="predictEyelid()">예측</button>
             <div id="eyelid-label-container" class="label-container"></div>
         </div>
+        <!-- 렌즈 상품 표시 영역 -->
+        <div id="lens-product-container">
+            <h2>추천 렌즈 상품</h2>
+            <div id="lens-product" class="label-container"></div>
+        </div>
     </div>
 
     <script type="text/javascript">
@@ -57,6 +62,26 @@
 
         let webcamModel, eyelidModel, maxPredictions;
         let webcamLabelContainer, eyelidLabelContainer;
+        let lensProductContainer;
+
+        async function loadModels() {
+            try {
+                // 웹캠 모델 로드
+                webcamModel = await tmImage.load(webcamURL + "model.json", webcamURL + "metadata.json");
+                maxPredictions = webcamModel.getTotalClasses();
+            } catch (error) {
+                alert("웹캠 모델을 불러오는 데 실패했습니다.");
+                console.error("웹캠 모델 로드 오류:", error);
+            }
+
+            try {
+                // 눈꺼풀 모델 로드
+                eyelidModel = await tmImage.load(eyelidURL + "model.json", eyelidURL + "metadata.json");
+            } catch (error) {
+                alert("눈꺼풀 모델을 불러오는 데 실패했습니다.");
+                console.error("눈꺼풀 모델 로드 오류:", error);
+            }
+        }
 
         async function predictWebcam() {
             const fileInput = document.getElementById("webcamFileInput");
@@ -81,12 +106,18 @@
 
                 const prediction = await webcamModel.predict(canvas);
 
-                for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                    const predictionDiv = document.createElement("div");
-                    predictionDiv.textContent = classPrediction;
-                    webcamLabelContainer.appendChild(predictionDiv);
-                }
+                // 예측 결과를 배열로 저장
+                const predictionsArray = Array.from(prediction).map((p, i) => {
+                    return { className: i.toString(), probability: p.probability };
+                });
+
+                // 확률에 따라 내림차순으로 정렬
+                predictionsArray.sort((a, b) => b.probability - a.probability);
+
+                // 가장 확률이 높은 클래스 이름 가져오기
+                const topPredictionWebcam = predictionsArray[0].className;
+                const recommendedLensWebcam = getRecommendedLensWebcam(topPredictionWebcam);
+                displayLensProducts(recommendedLensWebcam);
             };
         }
 
@@ -113,30 +144,71 @@
 
                 const prediction = await eyelidModel.predict(canvas);
 
-                for (let i = 0; i < maxPredictions; i++) {
-                    const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                    const predictionDiv = document.createElement("div");
-                    predictionDiv.textContent = classPrediction;
-                    eyelidLabelContainer.appendChild(predictionDiv);
-                }
+                // 예측 결과를 배열로 저장
+                const predictionsArray = Array.from(prediction).map((p, i) => {
+                    return { className: i.toString(), probability: p.probability };
+                });
+
+                // 확률에 따라 내림차순으로 정렬
+                predictionsArray.sort((a, b) => b.probability - a.probability);
+
+                // 가장 확률이 높은 클래스 이름 가져오기
+                const topPredictionEyelid = predictionsArray[0].className;
+                const recommendedLensEyelid = getRecommendedLensEyelid(topPredictionEyelid);
+                displayLensProducts(recommendedLensEyelid);
             };
         }
 
-        window.onload = async () => {
-            try {
-                webcamModel = await tmImage.load(webcamURL + "model.json", webcamURL + "metadata.json");
-                maxPredictions = webcamModel.getTotalClasses();
-            } catch (error) {
-                alert("웹캠 모델을 불러오는 데 실패했습니다.");
-                console.error("웹캠 모델 로드 오류:", error);
+        function getRecommendedLensWebcam(topPredictionWebcam) {
+            let recommendedLens = '';
+
+            // topPredictionWebcam에 따라 추천 렌즈 선택
+            if (topPredictionWebcam === '0') {
+                recommendedLens = '당신의 퍼스널 컬러는 봄웜! : 유스온 원데이 브라운(렌즈미), 칸나 로제 원데이 누드 브라운(아이돌렌즈)';
+            } else if (topPredictionWebcam === '1') {
+                recommendedLens = '당신의 퍼스널 컬러는 여름쿨! : 유스온 원데이 그레이(렌즈미), 유리알 물빛 그레이(아이돌렌즈)';
+            } else if (topPredictionWebcam === '2') {
+                recommendedLens = '당신의 퍼스널 컬러는 가을웜! : 문렛 쵸코(렌즈미), 로제에어리 베이지 브라운(아이돌렌즈)';
+            } else if (topPredictionWebcam === '3') {
+                recommendedLens = '당신의 퍼스널 컬러는 겨울쿨! : 유스 원데이 블랙(렌즈미), 디자이어 유로 그레이(아이돌렌즈)';
+            } else {
+                recommendedLens = '웹캠 결과에 따른 추천 렌즈 없음';
             }
 
-            try {
-                eyelidModel = await tmImage.load(eyelidURL + "model.json", eyelidURL + "metadata.json");
-            } catch (error) {
-                alert("눈꺼풀 모델을 불러오는 데 실패했습니다.");
-                console.error("눈꺼풀 모델 로드 오류:", error);
+            return recommendedLens;
+        }
+
+        function getRecommendedLensEyelid(topPredictionEyelid) {
+            let recommendedLens = '';
+
+            // topPredictionEyelid에 따라 추천 렌즈 선택
+            if (topPredictionEyelid === '0') {
+                recommendedLens = '당신의 눈꺼풀은 아웃라인! : 러시안 스모키 그레이(오렌즈), 쇼퍼홀릭 크리스틴 미드나잇 그레이(하파크리스틴)';
+            } else if (topPredictionEyelid === '1') {
+                recommendedLens = '당신의 눈꺼풀은 인아웃라인! : 프렌치샤인 원데이 라벤더(오렌즈), 피스풀 크리스틴 블루(하파크리스틴)';
+            } else if (topPredictionEyelid === '2') {
+                recommendedLens = '당신의 눈꺼풀은 인라인! : 샤인터치 밀키브라운(오렌즈), 비터스윗 크리스틴 올리브 브라운(하파크리스틴)';
+            } else if (topPredictionEyelid === '3') {
+                recommendedLens = '당신의 눈꺼풀은 속쌍라인! : 커밍 초코(오렌즈), 웨이크업 크리스틴 원데이 던 브라운(하파크리스틴)';
+            } else {
+                recommendedLens = '눈꺼풀 결과에 따른 추천 렌즈 없음';
             }
+
+            return recommendedLens;
+        }
+
+        function displayLensProducts(recommendedLens) {
+            lensProductContainer = document.getElementById("lens-product");
+            lensProductContainer.innerHTML = '';
+
+            // 추천 렌즈 표시
+            const lensProductDiv = document.createElement("div");
+            lensProductDiv.textContent = " " + recommendedLens;
+            lensProductContainer.appendChild(lensProductDiv);
+        }
+
+        window.onload = async () => {
+            await loadModels();
         };
     </script>
 </body>
