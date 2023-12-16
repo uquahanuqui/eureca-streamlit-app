@@ -337,4 +337,69 @@
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>렌즈 가격 정보</title>
+</head>
+<body>
+    <table border="1" id="lensTable">
+        <tr>
+            <th>상품명</th>
+            <th>가격</th>
+            <th>세부 정보</th>
+            <th>사용 기간</th>
+        </tr>
+    </table>
+
+    <script>
+        // CSV 형식의 데이터
+        var csvData = `"YURIAL MAX - WATER BROWN 예약수령", "26,000원", "BC : 8.7mm / DIA : 14.2mm / G.SIZE : 13.3mm / Water : 43%", "사용기간 : 1개월"
+"EURORING - WATERY GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", "6~12months"
+"EURORING - MINERAL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", "6~12months"
+"EURORING - MEL BEIGE 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:13.0mm", "6~12months"
+"유리알 원데이 얼그레이 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"유리알 원데이 맑은브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"칸나로제 원데이 베이지브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"칸나로제 원데이 누드브라운 2팩 할인 이벤트", "33,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"2세트 할인 이벤트(12개월)", "48,000원", "", ""
+"YURIAL 1DAY - EARL GRAY 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"YURIAL 1DAY - WATER BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"YURIAL - MUL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", "6~12months"
+"YURIAL - SERUM BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", "6~12months"
+"YURIAL - ROYAL BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", "6~12months"
+"YURIAL - WATER BROWN 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", "6~12months"
+"YURIAL - EARL GRAY 예약수령", "30,000원", "DIA:14.0mm / GRAPHIC SIZE:12.8mm", "6~12months"
+"CANNA ROZE 1DAY - NUDE BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"CANNA ROZE 1DAY - BEIGE BROWN 예약수령", "20,000원", "DIA:14.2mm/GRAPHIC SIZE:13.2mm/1Day/1팩 10p", ""
+"PRO1.5 - CARAMEL BROWN 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", "6~12months"
+"PRO1.5 - CHARCOAL GRAY 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", "6~12months"
+"PRO1.5 - PEACH BROWN 예약수령", "32,000원", "DIA:14.0mm/GRAPHIC SIZE:13.1mm", "6~12months"
+"ROZE AIRY - BLUE BLACK 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", "권장 사용:1개월"
+"ROZE AIRY - BABY BROWN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", "권장 사용:1개월"
+"ROZE AIRY - OLIVE GREEN 예약수령", "26,000원", "DIA:14.2mm GRAPHIC:13.2mm 실리콘폴리머렌즈", "권장 사용:1개월"`;
+
+
+        // CSV 데이터를 파싱하여 행을 분리
+        var rows = csvData.split("\n");
+
+        // HTML 표에 행 추가
+        var table = document.getElementById("lensTable");
+        rows.forEach(function(row) {
+            var cells = row.split(",");
+            var newRow = table.insertRow(table.rows.length);
+            cells.forEach(function(cell) {
+                var newCell = newRow.insertCell(newRow.cells.length);
+                newCell.appendChild(document.createTextNode(cell.replace(/"/g, '').trim()));
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
 
